@@ -15,6 +15,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace KPRestoration
 {
@@ -28,7 +30,10 @@ namespace KPRestoration
         public const string dbHost = "rmserver";
         public static Color errorColor = Color.FromArgb(197, 0, 0);
         private static string[] stateList = { "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MH", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "PW", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY" };
-
+        public enum TulleColors { White, Black, Blue, Green, Red, Lavender, Pink, Turquoise, Yellow, Ivory, [Description("Navy Blue")] NavyBlue, Orange, Purple, Silver, Burgundy, 
+                                    [Description("LT Pink")] LTPink, Fuchsia, AppleGreen, [Description("LT Blue")] LTBlue 
+                                }
+        public enum OrderStatus { Pending, Shipped, Received }
 
         /* Convert DateTime to MySQL Safe Date
         **********************************/

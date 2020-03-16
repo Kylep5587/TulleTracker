@@ -32,5 +32,12 @@ namespace KPRestoration
             Globals.CreateForm(p, panelContent);
             Text = "Product Manager";
         }
+
+        private void btnTulleOrders_Click(object sender, EventArgs e)
+        {
+            Tulle t = new Tulle();
+            Globals.CreateForm(t, panelContent);
+            Text = "Tulle Orders";
+        }
     }
 }

@@ -40,6 +40,7 @@
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -87,6 +88,18 @@
     <Compile Include="Pages\ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Tulle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Tulle.Designer.cs">
+      <DependentUpon>Tulle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TulleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\TulleOrder.Designer.cs">
+      <DependentUpon>TulleOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -97,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Tulle.resx">
+      <DependentUpon>Tulle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TulleOrder.resx">
+      <DependentUpon>TulleOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

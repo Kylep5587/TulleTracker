@@ -121,6 +121,7 @@
             this.btnTulleOrders.Text = "          Tulle Orders";
             this.btnTulleOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTulleOrders.UseVisualStyleBackColor = false;
+            this.btnTulleOrders.Click += new System.EventHandler(this.btnTulleOrders_Click);
             // 
             // btnInventory
             // 
