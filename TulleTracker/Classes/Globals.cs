@@ -173,6 +173,7 @@ namespace KPRestoration
         }
 
 
+
         /*  Checks string for valid email format
          *  **************************************/
         public static bool IsEmail(string email)

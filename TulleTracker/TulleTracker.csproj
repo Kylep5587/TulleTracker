@@ -70,6 +70,7 @@
     <Compile Include="Classes\DatabaseHelper.cs" />
     <Compile Include="Classes\Globals.cs" />
     <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\Order.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

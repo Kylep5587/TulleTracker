@@ -38,13 +38,13 @@
             this.btnAddItem = new System.Windows.Forms.Button();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblColor = new System.Windows.Forms.Label();
-            this.cbColor01 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbColor0 = new System.Windows.Forms.ComboBox();
+            this.tbQty0 = new System.Windows.Forms.TextBox();
+            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.tbOrderID = new System.Windows.Forms.TextBox();
+            this.cbOrderStatus = new System.Windows.Forms.ComboBox();
+            this.dtpDeliveryDate = new System.Windows.Forms.DateTimePicker();
+            this.tbTotal = new System.Windows.Forms.TextBox();
             this.btnAddOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -97,7 +97,7 @@
             // 
             this.lblItems.AutoSize = true;
             this.lblItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItems.Location = new System.Drawing.Point(405, 22);
+            this.lblItems.Location = new System.Drawing.Point(466, 22);
             this.lblItems.Name = "lblItems";
             this.lblItems.Size = new System.Drawing.Size(104, 20);
             this.lblItems.TabIndex = 5;
@@ -141,60 +141,63 @@
             this.lblColor.TabIndex = 9;
             this.lblColor.Text = "Color:";
             // 
-            // cbColor01
+            // cbColor0
             // 
-            this.cbColor01.FormattingEnabled = true;
-            this.cbColor01.Location = new System.Drawing.Point(392, 66);
-            this.cbColor01.Name = "cbColor01";
-            this.cbColor01.Size = new System.Drawing.Size(134, 21);
-            this.cbColor01.TabIndex = 6;
+            this.cbColor0.FormattingEnabled = true;
+            this.cbColor0.Location = new System.Drawing.Point(392, 66);
+            this.cbColor0.Name = "cbColor0";
+            this.cbColor0.Size = new System.Drawing.Size(134, 21);
+            this.cbColor0.TabIndex = 6;
             // 
-            // textBox1
+            // tbQty0
             // 
-            this.textBox1.Location = new System.Drawing.Point(603, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 20);
-            this.textBox1.TabIndex = 7;
+            this.tbQty0.Location = new System.Drawing.Point(603, 66);
+            this.tbQty0.Name = "tbQty0";
+            this.tbQty0.Size = new System.Drawing.Size(51, 20);
+            this.tbQty0.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dtpOrderDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 67);
-            this.dateTimePicker1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpOrderDate.CustomFormat = "yyyy-MM-dd";
+            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOrderDate.Location = new System.Drawing.Point(132, 67);
+            this.dtpOrderDate.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.Size = new System.Drawing.Size(153, 20);
+            this.dtpOrderDate.TabIndex = 1;
             // 
-            // textBox2
+            // tbOrderID
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 20);
-            this.textBox2.TabIndex = 2;
+            this.tbOrderID.Location = new System.Drawing.Point(132, 101);
+            this.tbOrderID.Name = "tbOrderID";
+            this.tbOrderID.Size = new System.Drawing.Size(153, 20);
+            this.tbOrderID.TabIndex = 2;
             // 
-            // comboBox2
+            // cbOrderStatus
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(132, 135);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 21);
-            this.comboBox2.TabIndex = 3;
+            this.cbOrderStatus.FormattingEnabled = true;
+            this.cbOrderStatus.Location = new System.Drawing.Point(132, 135);
+            this.cbOrderStatus.Name = "cbOrderStatus";
+            this.cbOrderStatus.Size = new System.Drawing.Size(153, 21);
+            this.cbOrderStatus.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // dtpDeliveryDate
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(132, 170);
-            this.dateTimePicker2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dtpDeliveryDate.CustomFormat = "yyyy-MM-dd";
+            this.dtpDeliveryDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDeliveryDate.Location = new System.Drawing.Point(132, 170);
+            this.dtpDeliveryDate.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtpDeliveryDate.Name = "dtpDeliveryDate";
+            this.dtpDeliveryDate.Size = new System.Drawing.Size(153, 20);
+            this.dtpDeliveryDate.TabIndex = 4;
             // 
-            // textBox3
+            // tbTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 204);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(153, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbTotal.Location = new System.Drawing.Point(132, 204);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.Size = new System.Drawing.Size(153, 20);
+            this.tbTotal.TabIndex = 5;
+            this.tbTotal.Text = "252.45";
             // 
             // btnAddOrder
             // 
@@ -204,6 +207,7 @@
             this.btnAddOrder.TabIndex = 11;
             this.btnAddOrder.Text = "Add Order";
             this.btnAddOrder.UseVisualStyleBackColor = true;
+            this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
             // 
             // TulleOrder
             // 
@@ -211,13 +215,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 353);
             this.Controls.Add(this.btnAddOrder);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cbColor01);
+            this.Controls.Add(this.tbTotal);
+            this.Controls.Add(this.dtpDeliveryDate);
+            this.Controls.Add(this.cbOrderStatus);
+            this.Controls.Add(this.tbOrderID);
+            this.Controls.Add(this.dtpOrderDate);
+            this.Controls.Add(this.tbQty0);
+            this.Controls.Add(this.cbColor0);
             this.Controls.Add(this.lblColor);
             this.Controls.Add(this.lblQuantity);
             this.Controls.Add(this.btnAddItem);
@@ -247,13 +251,13 @@
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblColor;
-        private System.Windows.Forms.ComboBox cbColor01;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbColor0;
+        private System.Windows.Forms.TextBox tbQty0;
+        private System.Windows.Forms.DateTimePicker dtpOrderDate;
+        private System.Windows.Forms.TextBox tbOrderID;
+        private System.Windows.Forms.ComboBox cbOrderStatus;
+        private System.Windows.Forms.DateTimePicker dtpDeliveryDate;
+        private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Button btnAddOrder;
     }
 }

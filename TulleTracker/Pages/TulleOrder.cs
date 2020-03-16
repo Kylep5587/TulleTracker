@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TulleTracker.Classes;
 
 namespace TulleTracker.Pages
 {
@@ -16,7 +17,7 @@ namespace TulleTracker.Pages
         int currentLblPointY;
         int currentInputPointY;
         int currentAddBtnY;
-        int i;
+        int itemOrderQty;
 
         public TulleOrder()
         {
@@ -24,11 +25,21 @@ namespace TulleTracker.Pages
             currentLblPointY = 70;
             currentInputPointY = 66;
             currentAddBtnY = 100;
-            i = 0;
-            PopulateColors(cbColor01);
+            itemOrderQty = 1;
+            PopulateColors(cbColor0);
+            PopulateOrderStatus(cbOrderStatus);
+            cbOrderStatus.SelectedIndex = 0;
         }
 
 
+        private void SetOrderItemQty(ref int itemOrderQty)
+        {
+            itemOrderQty++;
+        }
+
+        /* Add Color Options to ComboBox
+         *  Converts to more readable format
+        **********************************/
         private void PopulateColors(ComboBox cb)
         {
             foreach (var item in Enum.GetValues(typeof(Globals.TulleColors)))
@@ -48,12 +59,20 @@ namespace TulleTracker.Pages
                         cb.Items.Add("Navy Blue");
                         break;
                     default:
-                        cb.Items.Add(item);
+                        cb.Items.Add(item.ToString());
                         break;
                 }
             }
         }
 
+
+        private void PopulateOrderStatus (ComboBox cb)
+        {
+            foreach (var item in Enum.GetValues(typeof(Globals.OrderStatus)))
+            {
+                cb.Items.Add(item);
+            }
+        }
 
         /* Used to calulate the coordinates for next item input fields
         **********************************/
@@ -80,9 +99,9 @@ namespace TulleTracker.Pages
                 int colorLblPointX = 341;
                 int colorPointX = 392;
 
-                string cbColorInputName = "cbColor" + i;
-                string tbQty = "tbQty" + i;
-                i++;
+                string cbColorInputName = "cbColor" + itemOrderQty;
+                string tbQty = "tbQty" + itemOrderQty;
+                SetOrderItemQty(ref itemOrderQty);
 
                 this.Controls.Remove(btnAddItem);
                 // New "Color:" Label
@@ -129,6 +148,36 @@ namespace TulleTracker.Pages
                 MessageBox.Show(e.ToString());
             }
 
+        }
+
+
+        /* Adds the order to the database
+        **********************************/
+        private void btnAddOrder_Click(object sender, EventArgs e)
+        {
+            Order o = new Order()
+            {
+                OrderID = tbOrderID.Text,
+                OrderDate = Convert.ToDateTime(dtpOrderDate.Value),
+                OrderStatus = cbOrderStatus.Text,
+                DeliveryDate = Convert.ToDateTime(dtpDeliveryDate.Value),
+                Total = Convert.ToDecimal(tbTotal.Text),
+                ItemCount = itemOrderQty
+            };
+
+            // Store item information in array
+            string[,] itemData = new string[itemOrderQty,2];
+            for (int i = 0; i < itemOrderQty; i++)
+            {
+                itemData[i,0] = ((ComboBox)this.Controls["cbColor" + i]).Text;         // Get color 
+                itemData[i,1] = ((TextBox)this.Controls["tbQty" + i]).Text;            // Get Quantity
+            }
+
+            // Add the order information to database and close add order form if order successfully added
+            if (o.Add(itemData))
+            {
+                this.Close();
+            }
         }
     }
 }
