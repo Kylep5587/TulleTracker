@@ -210,11 +210,19 @@ namespace TulleTracker.Classes
         {
             string[] returnNumbers = new string[2];
             decimal neededRolls = 0;
-            decimal caseCount = rolls / Globals.TulleCaseSize; // Want to return something like "0.529" if performing "36 / 68"
+            decimal caseCount = (decimal)rolls / (decimal)Globals.TulleCaseSize; // Want to return something like "0.529" if performing "36 / 68"
+            caseCount = decimal.Round(caseCount, 2, MidpointRounding.AwayFromZero);
 
-            if (rolls % Globals.TulleCaseSize != 0)
+            if (rolls % Globals.TulleCaseSize != 0 && (rolls <= 68))
             {
-                neededRolls = Math.Ceiling(Globals.TulleCaseSize * caseCount);
+                neededRolls = Globals.TulleCaseSize - rolls;
+            }
+            else if (rolls % Globals.TulleCaseSize != 0 && (rolls > 68))
+            {
+                neededRolls = Math.Floor(caseCount);    // Determine how many full cases 
+                neededRolls = caseCount - neededRolls;  // Gets the percentage of case we have already
+                neededRolls = 1 - neededRolls;          // Gives percentage of case needed to make full case
+                neededRolls = Math.Round((decimal)Globals.TulleCaseSize * neededRolls);
             }
 
             returnNumbers[0] = caseCount.ToString();
