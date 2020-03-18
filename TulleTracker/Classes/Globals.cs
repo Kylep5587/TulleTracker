@@ -34,7 +34,7 @@ namespace KPRestoration
                                     [Description("LT Pink")] LTPink, Fuchsia, AppleGreen, [Description("LT Blue")] LTBlue 
                                 }
         public enum OrderStatus { Pending, Shipped, Received }
-
+        public static int TulleCaseSize = 68;
         /* Convert DateTime to MySQL Safe Date
         **********************************/
         public static string DateToMySQLString(DateTime inputDate)

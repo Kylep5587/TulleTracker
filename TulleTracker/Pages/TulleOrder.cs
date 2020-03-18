@@ -14,6 +14,7 @@ namespace TulleTracker.Pages
 {
     public partial class TulleOrder : Form
     {
+        Order no = new Order();
         int currentLblPointY;
         int currentInputPointY;
         int currentAddBtnY;
@@ -26,8 +27,8 @@ namespace TulleTracker.Pages
             currentInputPointY = 66;
             currentAddBtnY = 100;
             itemOrderQty = 1;
-            PopulateColors(cbColor0);
-            PopulateOrderStatus(cbOrderStatus);
+            no.PopulateColors(cbColor0);
+            no.PopulateOrderStatus(cbOrderStatus);
             cbOrderStatus.SelectedIndex = 0;
         }
 
@@ -37,42 +38,6 @@ namespace TulleTracker.Pages
             itemOrderQty++;
         }
 
-        /* Add Color Options to ComboBox
-         *  Converts to more readable format
-        **********************************/
-        private void PopulateColors(ComboBox cb)
-        {
-            foreach (var item in Enum.GetValues(typeof(Globals.TulleColors)))
-            {
-                switch (item.ToString())
-                {
-                    case "LTPink":
-                        cb.Items.Add("LT Pink");
-                        break;
-                    case "LTBlue":
-                        cb.Items.Add("LT Blue");
-                        break;
-                    case "AppleGreen":
-                        cb.Items.Add("Apple Green");
-                        break;
-                    case "NavyBlue":
-                        cb.Items.Add("Navy Blue");
-                        break;
-                    default:
-                        cb.Items.Add(item.ToString());
-                        break;
-                }
-            }
-        }
-
-
-        private void PopulateOrderStatus (ComboBox cb)
-        {
-            foreach (var item in Enum.GetValues(typeof(Globals.OrderStatus)))
-            {
-                cb.Items.Add(item);
-            }
-        }
 
         /* Used to calulate the coordinates for next item input fields
         **********************************/
@@ -118,7 +83,7 @@ namespace TulleTracker.Pages
                     Name = cbColorInputName,
                     Location = new Point(colorPointX, currentInputPointY)
                 };
-                PopulateColors(colors);
+                no.PopulateColors(colors);
                 colors.Width = 134;
                 this.Controls.Add(colors);
 

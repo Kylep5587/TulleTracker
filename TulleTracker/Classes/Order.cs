@@ -2,10 +2,12 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TulleTracker.Pages;
 
 namespace TulleTracker.Classes
 {
@@ -129,6 +131,97 @@ namespace TulleTracker.Classes
             return false;
         }
 
+
+        /* Add Color Options to ComboBox
+         *  Converts to more readable format
+        **********************************/
+        public void PopulateColors(ComboBox cb)
+        {
+            foreach (var item in Enum.GetValues(typeof(Globals.TulleColors)))
+            {
+                switch (item.ToString())
+                {
+                    case "LTPink":
+                        cb.Items.Add("LT Pink");
+                        break;
+                    case "LTBlue":
+                        cb.Items.Add("LT Blue");
+                        break;
+                    case "AppleGreen":
+                        cb.Items.Add("Apple Green");
+                        break;
+                    case "NavyBlue":
+                        cb.Items.Add("Navy Blue");
+                        break;
+                    default:
+                        cb.Items.Add(item.ToString());
+                        break;
+                }
+            }
+        }
+
+
+        /* Populates given combobox with enum values
+        **********************************/
+        public void PopulateOrderStatus(ComboBox cb)
+        {
+            foreach (var item in Enum.GetValues(typeof(Globals.OrderStatus)))
+            {
+                cb.Items.Add(item);
+            }
+        }
+
+
+        /* Performs search of correct table and populates
+         *  the correct DGV with results
+         * *****************************/
+        public void SearchOrders(DataGridView dgv, string searchQuery)
+        {
+            searchQuery = "%" + searchQuery + "%";                              // Add wildcards to the search query
+            MySqlCommand cmd = new MySqlCommand("SEARCH_ORDERS", db.conn);
+            cmd.CommandType = CommandType.StoredProcedure;                      
+            cmd.Parameters.AddWithValue("@searchQuery", searchQuery.Trim());
+            db.ExecuteCommand(cmd);
+            db.PopulateDGV(dgv, cmd);
+        }
+
+
+        public string ExecuteColorSearch(string color)
+        {
+            string colorQty = "0";
+            MySqlCommand cmd = new MySqlCommand("GET_COLOR_QUANTITIES", db.conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@searchColor", color);
+            cmd.Parameters.Add("colorTotal", MySqlDbType.Int32).Direction = ParameterDirection.Output;
+            db.OpenConnection();
+            cmd.ExecuteNonQuery(); // Returning the number of entries and not sum of the item quantity
+            if ((cmd.Parameters["colorTotal"].Value.ToString() != ""))
+                colorQty = cmd.Parameters["colorTotal"].Value.ToString();
+            else
+                colorQty = "-";
+            db.CloseConnection();
+            return colorQty;
+        }
+
         
+        /* Determine how many cases of rolls are inbound
+        **********************************/
+        public string[] CalculateCases(int rolls)
+        {
+            string[] returnNumbers = new string[2];
+            decimal neededRolls = 0;
+            decimal caseCount = rolls / Globals.TulleCaseSize; // Want to return something like "0.529" if performing "36 / 68"
+
+            if (rolls % Globals.TulleCaseSize != 0)
+            {
+                neededRolls = Math.Ceiling(Globals.TulleCaseSize * caseCount);
+            }
+
+            returnNumbers[0] = caseCount.ToString();
+            returnNumbers[1] = neededRolls.ToString();
+
+            return returnNumbers;
+        }
+
     }
 }

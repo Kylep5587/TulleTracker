@@ -31,61 +31,71 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label85 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.shippedOrders = new System.Windows.Forms.Label();
+            this.pendingOrders = new System.Windows.Forms.Label();
+            this.totalOrders = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.totalRollQty = new System.Windows.Forms.Label();
+            this.yellowNeeded = new System.Windows.Forms.Label();
+            this.yellowCases = new System.Windows.Forms.Label();
+            this.yellowQty = new System.Windows.Forms.Label();
+            this.whiteNeeded = new System.Windows.Forms.Label();
+            this.whiteCases = new System.Windows.Forms.Label();
+            this.whiteQty = new System.Windows.Forms.Label();
+            this.turquoiseNeeded = new System.Windows.Forms.Label();
+            this.turqoiseCases = new System.Windows.Forms.Label();
+            this.turquoiseQty = new System.Windows.Forms.Label();
+            this.silverNeeded = new System.Windows.Forms.Label();
+            this.silverCases = new System.Windows.Forms.Label();
+            this.silverQty = new System.Windows.Forms.Label();
+            this.redNeeded = new System.Windows.Forms.Label();
+            this.redCases = new System.Windows.Forms.Label();
+            this.redQty = new System.Windows.Forms.Label();
+            this.purpleNeeded = new System.Windows.Forms.Label();
+            this.purpleCases = new System.Windows.Forms.Label();
+            this.purpleQty = new System.Windows.Forms.Label();
+            this.pinkNeeded = new System.Windows.Forms.Label();
+            this.pinkCases = new System.Windows.Forms.Label();
+            this.pinkQty = new System.Windows.Forms.Label();
+            this.orangeNeeded = new System.Windows.Forms.Label();
+            this.orangeCases = new System.Windows.Forms.Label();
+            this.orangeQty = new System.Windows.Forms.Label();
+            this.navyNeeded = new System.Windows.Forms.Label();
+            this.navyCases = new System.Windows.Forms.Label();
+            this.nbQty = new System.Windows.Forms.Label();
+            this.agNeeded = new System.Windows.Forms.Label();
+            this.agCases = new System.Windows.Forms.Label();
+            this.agQty = new System.Windows.Forms.Label();
+            this.ltPinkNeeded = new System.Windows.Forms.Label();
+            this.ltPinkCases = new System.Windows.Forms.Label();
+            this.ltPinkQty = new System.Windows.Forms.Label();
+            this.ltBlueNeeded = new System.Windows.Forms.Label();
+            this.ltBlueCases = new System.Windows.Forms.Label();
+            this.ltBlueQty = new System.Windows.Forms.Label();
+            this.lavenderNeeded = new System.Windows.Forms.Label();
+            this.lavenderCases = new System.Windows.Forms.Label();
+            this.lavenderQty = new System.Windows.Forms.Label();
+            this.ivoryNeeded = new System.Windows.Forms.Label();
+            this.ivoryCases = new System.Windows.Forms.Label();
+            this.ivoryQty = new System.Windows.Forms.Label();
+            this.greenNeeded = new System.Windows.Forms.Label();
+            this.greenCases = new System.Windows.Forms.Label();
+            this.greenQty = new System.Windows.Forms.Label();
+            this.fuchsiaNeeded = new System.Windows.Forms.Label();
+            this.fuchsiaCases = new System.Windows.Forms.Label();
+            this.fuchsiaQty = new System.Windows.Forms.Label();
+            this.burgundyNeeded = new System.Windows.Forms.Label();
+            this.burgundCases = new System.Windows.Forms.Label();
+            this.blueNeeded = new System.Windows.Forms.Label();
+            this.blueCases = new System.Windows.Forms.Label();
+            this.blackNeeded = new System.Windows.Forms.Label();
+            this.blueQty = new System.Windows.Forms.Label();
             this.blackCases = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -111,28 +121,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.blackQty = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.burgundyQty = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPending = new System.Windows.Forms.Label();
             this.lblTotalOrders = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.totalOrders = new System.Windows.Forms.Label();
-            this.pendingOrders = new System.Windows.Forms.Label();
-            this.shippedOrders = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label85 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -180,6 +180,67 @@
             this.nToolStripMenuItem.Text = "New Order";
             this.nToolStripMenuItem.Click += new System.EventHandler(this.nToolStripMenuItem_Click);
             // 
+            // searchOrdersToolStripMenuItem
+            // 
+            this.searchOrdersToolStripMenuItem.Name = "searchOrdersToolStripMenuItem";
+            this.searchOrdersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.searchOrdersToolStripMenuItem.Text = "Search Orders";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.Location = new System.Drawing.Point(781, 68);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(114, 17);
+            this.label85.TabIndex = 10;
+            this.label85.Text = "Recent Orders";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(432, 92);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(813, 507);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // shippedOrders
+            // 
+            this.shippedOrders.AutoSize = true;
+            this.shippedOrders.Location = new System.Drawing.Point(416, 12);
+            this.shippedOrders.Name = "shippedOrders";
+            this.shippedOrders.Size = new System.Drawing.Size(13, 13);
+            this.shippedOrders.TabIndex = 8;
+            this.shippedOrders.Text = "0";
+            // 
+            // pendingOrders
+            // 
+            this.pendingOrders.AutoSize = true;
+            this.pendingOrders.Location = new System.Drawing.Point(254, 12);
+            this.pendingOrders.Name = "pendingOrders";
+            this.pendingOrders.Size = new System.Drawing.Size(13, 13);
+            this.pendingOrders.TabIndex = 7;
+            this.pendingOrders.Text = "0";
+            // 
+            // totalOrders
+            // 
+            this.totalOrders.AutoSize = true;
+            this.totalOrders.Location = new System.Drawing.Point(94, 12);
+            this.totalOrders.Name = "totalOrders";
+            this.totalOrders.Size = new System.Drawing.Size(13, 13);
+            this.totalOrders.TabIndex = 6;
+            this.totalOrders.Text = "0";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(139, 68);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(107, 17);
+            this.label80.TabIndex = 5;
+            this.label80.Text = "Inbound Rolls";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -187,64 +248,64 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
             this.tableLayoutPanel1.Controls.Add(this.label84, 0, 20);
             this.tableLayoutPanel1.Controls.Add(this.label82, 2, 20);
-            this.tableLayoutPanel1.Controls.Add(this.label81, 1, 20);
-            this.tableLayoutPanel1.Controls.Add(this.label79, 3, 19);
-            this.tableLayoutPanel1.Controls.Add(this.label78, 2, 19);
-            this.tableLayoutPanel1.Controls.Add(this.label77, 1, 19);
-            this.tableLayoutPanel1.Controls.Add(this.label76, 3, 18);
-            this.tableLayoutPanel1.Controls.Add(this.label75, 2, 18);
-            this.tableLayoutPanel1.Controls.Add(this.label74, 1, 18);
-            this.tableLayoutPanel1.Controls.Add(this.label73, 3, 17);
-            this.tableLayoutPanel1.Controls.Add(this.label72, 2, 17);
-            this.tableLayoutPanel1.Controls.Add(this.label71, 1, 17);
-            this.tableLayoutPanel1.Controls.Add(this.label70, 3, 16);
-            this.tableLayoutPanel1.Controls.Add(this.label69, 2, 16);
-            this.tableLayoutPanel1.Controls.Add(this.label68, 1, 16);
-            this.tableLayoutPanel1.Controls.Add(this.label67, 3, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label66, 2, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label65, 1, 15);
-            this.tableLayoutPanel1.Controls.Add(this.label64, 3, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label63, 2, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label62, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label61, 3, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label60, 2, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label59, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label58, 3, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label57, 2, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label56, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label55, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label54, 2, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label53, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label52, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label51, 2, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label50, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label49, 3, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label48, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label47, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label46, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label45, 2, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label44, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label43, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label42, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label41, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label40, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label39, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label38, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label36, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label35, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label34, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label33, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label31, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label30, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label29, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label28, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label27, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label25, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.totalRollQty, 1, 20);
+            this.tableLayoutPanel1.Controls.Add(this.yellowNeeded, 3, 19);
+            this.tableLayoutPanel1.Controls.Add(this.yellowCases, 2, 19);
+            this.tableLayoutPanel1.Controls.Add(this.yellowQty, 1, 19);
+            this.tableLayoutPanel1.Controls.Add(this.whiteNeeded, 3, 18);
+            this.tableLayoutPanel1.Controls.Add(this.whiteCases, 2, 18);
+            this.tableLayoutPanel1.Controls.Add(this.whiteQty, 1, 18);
+            this.tableLayoutPanel1.Controls.Add(this.turquoiseNeeded, 3, 17);
+            this.tableLayoutPanel1.Controls.Add(this.turqoiseCases, 2, 17);
+            this.tableLayoutPanel1.Controls.Add(this.turquoiseQty, 1, 17);
+            this.tableLayoutPanel1.Controls.Add(this.silverNeeded, 3, 16);
+            this.tableLayoutPanel1.Controls.Add(this.silverCases, 2, 16);
+            this.tableLayoutPanel1.Controls.Add(this.silverQty, 1, 16);
+            this.tableLayoutPanel1.Controls.Add(this.redNeeded, 3, 15);
+            this.tableLayoutPanel1.Controls.Add(this.redCases, 2, 15);
+            this.tableLayoutPanel1.Controls.Add(this.redQty, 1, 15);
+            this.tableLayoutPanel1.Controls.Add(this.purpleNeeded, 3, 14);
+            this.tableLayoutPanel1.Controls.Add(this.purpleCases, 2, 14);
+            this.tableLayoutPanel1.Controls.Add(this.purpleQty, 1, 14);
+            this.tableLayoutPanel1.Controls.Add(this.pinkNeeded, 3, 13);
+            this.tableLayoutPanel1.Controls.Add(this.pinkCases, 2, 13);
+            this.tableLayoutPanel1.Controls.Add(this.pinkQty, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.orangeNeeded, 3, 12);
+            this.tableLayoutPanel1.Controls.Add(this.orangeCases, 2, 12);
+            this.tableLayoutPanel1.Controls.Add(this.orangeQty, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.navyNeeded, 3, 11);
+            this.tableLayoutPanel1.Controls.Add(this.navyCases, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.nbQty, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.agNeeded, 3, 10);
+            this.tableLayoutPanel1.Controls.Add(this.agCases, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.agQty, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.ltPinkNeeded, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.ltPinkCases, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.ltPinkQty, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.ltBlueNeeded, 3, 8);
+            this.tableLayoutPanel1.Controls.Add(this.ltBlueCases, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.ltBlueQty, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lavenderNeeded, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lavenderCases, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.lavenderQty, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.ivoryNeeded, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ivoryCases, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.ivoryQty, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.greenNeeded, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.greenCases, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.greenQty, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.fuchsiaNeeded, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.fuchsiaCases, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.fuchsiaQty, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.burgundyNeeded, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.burgundCases, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.blueNeeded, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.blueCases, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.blackNeeded, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.blueQty, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.blackCases, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.label24, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label23, 2, 0);
@@ -270,7 +331,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.blackQty, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.burgundyQty, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label83, 3, 20);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 81);
@@ -302,599 +363,638 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(366, 482);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label79.Location = new System.Drawing.Point(217, 430);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(142, 20);
-            this.label79.TabIndex = 75;
-            this.label79.Text = "0";
-            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label78.Location = new System.Drawing.Point(156, 430);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(54, 20);
-            this.label78.TabIndex = 74;
-            this.label78.Text = "0";
-            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label77.Location = new System.Drawing.Point(95, 430);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(54, 20);
-            this.label77.TabIndex = 73;
-            this.label77.Text = "0";
-            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label76.Location = new System.Drawing.Point(217, 409);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(142, 20);
-            this.label76.TabIndex = 72;
-            this.label76.Text = "0";
-            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label75.Location = new System.Drawing.Point(156, 409);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(54, 20);
-            this.label75.TabIndex = 71;
-            this.label75.Text = "0";
-            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label74.Location = new System.Drawing.Point(95, 409);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(54, 20);
-            this.label74.TabIndex = 70;
-            this.label74.Text = "0";
-            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label73.Location = new System.Drawing.Point(217, 388);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(142, 20);
-            this.label73.TabIndex = 69;
-            this.label73.Text = "0";
-            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label72.Location = new System.Drawing.Point(156, 388);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(54, 20);
-            this.label72.TabIndex = 68;
-            this.label72.Text = "0";
-            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label71.Location = new System.Drawing.Point(95, 388);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(54, 20);
-            this.label71.TabIndex = 67;
-            this.label71.Text = "0";
-            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label70.Location = new System.Drawing.Point(217, 367);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(142, 20);
-            this.label70.TabIndex = 66;
-            this.label70.Text = "0";
-            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label69.Location = new System.Drawing.Point(156, 367);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(54, 20);
-            this.label69.TabIndex = 65;
-            this.label69.Text = "0";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label68.Location = new System.Drawing.Point(95, 367);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(54, 20);
-            this.label68.TabIndex = 64;
-            this.label68.Text = "0";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label67.Location = new System.Drawing.Point(217, 346);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(142, 20);
-            this.label67.TabIndex = 63;
-            this.label67.Text = "0";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label66.Location = new System.Drawing.Point(156, 346);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(54, 20);
-            this.label66.TabIndex = 62;
-            this.label66.Text = "0";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label65.Location = new System.Drawing.Point(95, 346);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(54, 20);
-            this.label65.TabIndex = 61;
-            this.label65.Text = "0";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label64.Location = new System.Drawing.Point(217, 325);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(142, 20);
-            this.label64.TabIndex = 60;
-            this.label64.Text = "0";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label63.Location = new System.Drawing.Point(156, 325);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(54, 20);
-            this.label63.TabIndex = 59;
-            this.label63.Text = "0";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label62.Location = new System.Drawing.Point(95, 325);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(54, 20);
-            this.label62.TabIndex = 58;
-            this.label62.Text = "0";
-            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label61.Location = new System.Drawing.Point(217, 304);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(142, 20);
-            this.label61.TabIndex = 57;
-            this.label61.Text = "0";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label60.Location = new System.Drawing.Point(156, 304);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(54, 20);
-            this.label60.TabIndex = 56;
-            this.label60.Text = "0";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label59.Location = new System.Drawing.Point(95, 304);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(54, 20);
-            this.label59.TabIndex = 55;
-            this.label59.Text = "0";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label58.Location = new System.Drawing.Point(217, 283);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(142, 20);
-            this.label58.TabIndex = 54;
-            this.label58.Text = "0";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label57.Location = new System.Drawing.Point(156, 283);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(54, 20);
-            this.label57.TabIndex = 53;
-            this.label57.Text = "0";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label56.Location = new System.Drawing.Point(95, 283);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(54, 20);
-            this.label56.TabIndex = 52;
-            this.label56.Text = "0";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label55.Location = new System.Drawing.Point(217, 262);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(142, 20);
-            this.label55.TabIndex = 51;
-            this.label55.Text = "0";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label54.Location = new System.Drawing.Point(156, 262);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(54, 20);
-            this.label54.TabIndex = 50;
-            this.label54.Text = "0";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label53.Location = new System.Drawing.Point(95, 262);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(54, 20);
-            this.label53.TabIndex = 49;
-            this.label53.Text = "0";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label52.Location = new System.Drawing.Point(217, 241);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(142, 20);
-            this.label52.TabIndex = 48;
-            this.label52.Text = "0";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label51.Location = new System.Drawing.Point(156, 241);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(54, 20);
-            this.label51.TabIndex = 47;
-            this.label51.Text = "0";
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label50.Location = new System.Drawing.Point(95, 241);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(54, 20);
-            this.label50.TabIndex = 46;
-            this.label50.Text = "0";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label49.Location = new System.Drawing.Point(217, 220);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(142, 20);
-            this.label49.TabIndex = 45;
-            this.label49.Text = "0";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label48.Location = new System.Drawing.Point(156, 220);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(54, 20);
-            this.label48.TabIndex = 44;
-            this.label48.Text = "0";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label47.Location = new System.Drawing.Point(95, 220);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(54, 20);
-            this.label47.TabIndex = 43;
-            this.label47.Text = "0";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Location = new System.Drawing.Point(217, 199);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(142, 20);
-            this.label46.TabIndex = 42;
-            this.label46.Text = "0";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Location = new System.Drawing.Point(156, 199);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(54, 20);
-            this.label45.TabIndex = 41;
-            this.label45.Text = "0";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Location = new System.Drawing.Point(95, 199);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(54, 20);
-            this.label44.TabIndex = 40;
-            this.label44.Text = "0";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Location = new System.Drawing.Point(217, 178);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(142, 20);
-            this.label43.TabIndex = 39;
-            this.label43.Text = "0";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Location = new System.Drawing.Point(156, 178);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(54, 20);
-            this.label42.TabIndex = 38;
-            this.label42.Text = "0";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Location = new System.Drawing.Point(95, 178);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(54, 20);
-            this.label41.TabIndex = 37;
-            this.label41.Text = "0";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(217, 157);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(142, 20);
-            this.label40.TabIndex = 36;
-            this.label40.Text = "0";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Location = new System.Drawing.Point(156, 157);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(54, 20);
-            this.label39.TabIndex = 35;
-            this.label39.Text = "0";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Location = new System.Drawing.Point(95, 157);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(54, 20);
-            this.label38.TabIndex = 34;
-            this.label38.Text = "0";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Location = new System.Drawing.Point(217, 136);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(142, 20);
-            this.label37.TabIndex = 33;
-            this.label37.Text = "0";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(156, 136);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(54, 20);
-            this.label36.TabIndex = 32;
-            this.label36.Text = "0";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Location = new System.Drawing.Point(95, 136);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(54, 20);
-            this.label35.TabIndex = 31;
-            this.label35.Text = "0";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Location = new System.Drawing.Point(217, 115);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(142, 20);
-            this.label34.TabIndex = 30;
-            this.label34.Text = "0";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(156, 115);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 20);
-            this.label33.TabIndex = 29;
-            this.label33.Text = "0";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(95, 115);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 20);
-            this.label32.TabIndex = 28;
-            this.label32.Text = "0";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(217, 94);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(142, 20);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "0";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(156, 94);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 20);
-            this.label30.TabIndex = 26;
-            this.label30.Text = "0";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(217, 73);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(142, 20);
-            this.label29.TabIndex = 25;
-            this.label29.Text = "0";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(156, 73);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(54, 20);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "0";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(217, 52);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(142, 20);
-            this.label27.TabIndex = 23;
-            this.label27.Text = "0";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(95, 73);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(54, 20);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "0";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label84.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label84.Location = new System.Drawing.Point(11, 451);
+            this.label84.Margin = new System.Windows.Forms.Padding(0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(80, 20);
+            this.label84.TabIndex = 77;
+            this.label84.Text = "Totals";
+            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label82.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label82.Location = new System.Drawing.Point(153, 451);
+            this.label82.Margin = new System.Windows.Forms.Padding(0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(60, 20);
+            this.label82.TabIndex = 9;
+            this.label82.Text = "-";
+            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalRollQty
+            // 
+            this.totalRollQty.AutoSize = true;
+            this.totalRollQty.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.totalRollQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalRollQty.Location = new System.Drawing.Point(92, 451);
+            this.totalRollQty.Margin = new System.Windows.Forms.Padding(0);
+            this.totalRollQty.Name = "totalRollQty";
+            this.totalRollQty.Size = new System.Drawing.Size(60, 20);
+            this.totalRollQty.TabIndex = 9;
+            this.totalRollQty.Text = "0";
+            this.totalRollQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // yellowNeeded
+            // 
+            this.yellowNeeded.AutoSize = true;
+            this.yellowNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yellowNeeded.Location = new System.Drawing.Point(217, 430);
+            this.yellowNeeded.Name = "yellowNeeded";
+            this.yellowNeeded.Size = new System.Drawing.Size(145, 20);
+            this.yellowNeeded.TabIndex = 75;
+            this.yellowNeeded.Text = "-";
+            this.yellowNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // yellowCases
+            // 
+            this.yellowCases.AutoSize = true;
+            this.yellowCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yellowCases.Location = new System.Drawing.Point(156, 430);
+            this.yellowCases.Name = "yellowCases";
+            this.yellowCases.Size = new System.Drawing.Size(54, 20);
+            this.yellowCases.TabIndex = 74;
+            this.yellowCases.Text = "-";
+            this.yellowCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // yellowQty
+            // 
+            this.yellowQty.AutoSize = true;
+            this.yellowQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yellowQty.Location = new System.Drawing.Point(95, 430);
+            this.yellowQty.Name = "yellowQty";
+            this.yellowQty.Size = new System.Drawing.Size(54, 20);
+            this.yellowQty.TabIndex = 73;
+            this.yellowQty.Text = "0";
+            this.yellowQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // whiteNeeded
+            // 
+            this.whiteNeeded.AutoSize = true;
+            this.whiteNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.whiteNeeded.Location = new System.Drawing.Point(217, 409);
+            this.whiteNeeded.Name = "whiteNeeded";
+            this.whiteNeeded.Size = new System.Drawing.Size(145, 20);
+            this.whiteNeeded.TabIndex = 72;
+            this.whiteNeeded.Text = "-";
+            this.whiteNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // whiteCases
+            // 
+            this.whiteCases.AutoSize = true;
+            this.whiteCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.whiteCases.Location = new System.Drawing.Point(156, 409);
+            this.whiteCases.Name = "whiteCases";
+            this.whiteCases.Size = new System.Drawing.Size(54, 20);
+            this.whiteCases.TabIndex = 71;
+            this.whiteCases.Text = "-";
+            this.whiteCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // whiteQty
+            // 
+            this.whiteQty.AutoSize = true;
+            this.whiteQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.whiteQty.Location = new System.Drawing.Point(95, 409);
+            this.whiteQty.Name = "whiteQty";
+            this.whiteQty.Size = new System.Drawing.Size(54, 20);
+            this.whiteQty.TabIndex = 70;
+            this.whiteQty.Text = "0";
+            this.whiteQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // turquoiseNeeded
+            // 
+            this.turquoiseNeeded.AutoSize = true;
+            this.turquoiseNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.turquoiseNeeded.Location = new System.Drawing.Point(217, 388);
+            this.turquoiseNeeded.Name = "turquoiseNeeded";
+            this.turquoiseNeeded.Size = new System.Drawing.Size(145, 20);
+            this.turquoiseNeeded.TabIndex = 69;
+            this.turquoiseNeeded.Text = "-";
+            this.turquoiseNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // turqoiseCases
+            // 
+            this.turqoiseCases.AutoSize = true;
+            this.turqoiseCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.turqoiseCases.Location = new System.Drawing.Point(156, 388);
+            this.turqoiseCases.Name = "turqoiseCases";
+            this.turqoiseCases.Size = new System.Drawing.Size(54, 20);
+            this.turqoiseCases.TabIndex = 68;
+            this.turqoiseCases.Text = "-";
+            this.turqoiseCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // turquoiseQty
+            // 
+            this.turquoiseQty.AutoSize = true;
+            this.turquoiseQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.turquoiseQty.Location = new System.Drawing.Point(95, 388);
+            this.turquoiseQty.Name = "turquoiseQty";
+            this.turquoiseQty.Size = new System.Drawing.Size(54, 20);
+            this.turquoiseQty.TabIndex = 67;
+            this.turquoiseQty.Text = "0";
+            this.turquoiseQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // silverNeeded
+            // 
+            this.silverNeeded.AutoSize = true;
+            this.silverNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.silverNeeded.Location = new System.Drawing.Point(217, 367);
+            this.silverNeeded.Name = "silverNeeded";
+            this.silverNeeded.Size = new System.Drawing.Size(145, 20);
+            this.silverNeeded.TabIndex = 66;
+            this.silverNeeded.Text = "-";
+            this.silverNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // silverCases
+            // 
+            this.silverCases.AutoSize = true;
+            this.silverCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.silverCases.Location = new System.Drawing.Point(156, 367);
+            this.silverCases.Name = "silverCases";
+            this.silverCases.Size = new System.Drawing.Size(54, 20);
+            this.silverCases.TabIndex = 65;
+            this.silverCases.Text = "-";
+            this.silverCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // silverQty
+            // 
+            this.silverQty.AutoSize = true;
+            this.silverQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.silverQty.Location = new System.Drawing.Point(95, 367);
+            this.silverQty.Name = "silverQty";
+            this.silverQty.Size = new System.Drawing.Size(54, 20);
+            this.silverQty.TabIndex = 64;
+            this.silverQty.Text = "0";
+            this.silverQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // redNeeded
+            // 
+            this.redNeeded.AutoSize = true;
+            this.redNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redNeeded.Location = new System.Drawing.Point(217, 346);
+            this.redNeeded.Name = "redNeeded";
+            this.redNeeded.Size = new System.Drawing.Size(145, 20);
+            this.redNeeded.TabIndex = 63;
+            this.redNeeded.Text = "-";
+            this.redNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // redCases
+            // 
+            this.redCases.AutoSize = true;
+            this.redCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redCases.Location = new System.Drawing.Point(156, 346);
+            this.redCases.Name = "redCases";
+            this.redCases.Size = new System.Drawing.Size(54, 20);
+            this.redCases.TabIndex = 62;
+            this.redCases.Text = "-";
+            this.redCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // redQty
+            // 
+            this.redQty.AutoSize = true;
+            this.redQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redQty.Location = new System.Drawing.Point(95, 346);
+            this.redQty.Name = "redQty";
+            this.redQty.Size = new System.Drawing.Size(54, 20);
+            this.redQty.TabIndex = 61;
+            this.redQty.Text = "0";
+            this.redQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // purpleNeeded
+            // 
+            this.purpleNeeded.AutoSize = true;
+            this.purpleNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.purpleNeeded.Location = new System.Drawing.Point(217, 325);
+            this.purpleNeeded.Name = "purpleNeeded";
+            this.purpleNeeded.Size = new System.Drawing.Size(145, 20);
+            this.purpleNeeded.TabIndex = 60;
+            this.purpleNeeded.Text = "-";
+            this.purpleNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // purpleCases
+            // 
+            this.purpleCases.AutoSize = true;
+            this.purpleCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.purpleCases.Location = new System.Drawing.Point(156, 325);
+            this.purpleCases.Name = "purpleCases";
+            this.purpleCases.Size = new System.Drawing.Size(54, 20);
+            this.purpleCases.TabIndex = 59;
+            this.purpleCases.Text = "-";
+            this.purpleCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // purpleQty
+            // 
+            this.purpleQty.AutoSize = true;
+            this.purpleQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.purpleQty.Location = new System.Drawing.Point(95, 325);
+            this.purpleQty.Name = "purpleQty";
+            this.purpleQty.Size = new System.Drawing.Size(54, 20);
+            this.purpleQty.TabIndex = 58;
+            this.purpleQty.Text = "0";
+            this.purpleQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pinkNeeded
+            // 
+            this.pinkNeeded.AutoSize = true;
+            this.pinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pinkNeeded.Location = new System.Drawing.Point(217, 304);
+            this.pinkNeeded.Name = "pinkNeeded";
+            this.pinkNeeded.Size = new System.Drawing.Size(145, 20);
+            this.pinkNeeded.TabIndex = 57;
+            this.pinkNeeded.Text = "-";
+            this.pinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pinkCases
+            // 
+            this.pinkCases.AutoSize = true;
+            this.pinkCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pinkCases.Location = new System.Drawing.Point(156, 304);
+            this.pinkCases.Name = "pinkCases";
+            this.pinkCases.Size = new System.Drawing.Size(54, 20);
+            this.pinkCases.TabIndex = 56;
+            this.pinkCases.Text = "-";
+            this.pinkCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pinkQty
+            // 
+            this.pinkQty.AutoSize = true;
+            this.pinkQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pinkQty.Location = new System.Drawing.Point(95, 304);
+            this.pinkQty.Name = "pinkQty";
+            this.pinkQty.Size = new System.Drawing.Size(54, 20);
+            this.pinkQty.TabIndex = 55;
+            this.pinkQty.Text = "0";
+            this.pinkQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // orangeNeeded
+            // 
+            this.orangeNeeded.AutoSize = true;
+            this.orangeNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orangeNeeded.Location = new System.Drawing.Point(217, 283);
+            this.orangeNeeded.Name = "orangeNeeded";
+            this.orangeNeeded.Size = new System.Drawing.Size(145, 20);
+            this.orangeNeeded.TabIndex = 54;
+            this.orangeNeeded.Text = "-";
+            this.orangeNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // orangeCases
+            // 
+            this.orangeCases.AutoSize = true;
+            this.orangeCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orangeCases.Location = new System.Drawing.Point(156, 283);
+            this.orangeCases.Name = "orangeCases";
+            this.orangeCases.Size = new System.Drawing.Size(54, 20);
+            this.orangeCases.TabIndex = 53;
+            this.orangeCases.Text = "-";
+            this.orangeCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // orangeQty
+            // 
+            this.orangeQty.AutoSize = true;
+            this.orangeQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orangeQty.Location = new System.Drawing.Point(95, 283);
+            this.orangeQty.Name = "orangeQty";
+            this.orangeQty.Size = new System.Drawing.Size(54, 20);
+            this.orangeQty.TabIndex = 52;
+            this.orangeQty.Text = "0";
+            this.orangeQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // navyNeeded
+            // 
+            this.navyNeeded.AutoSize = true;
+            this.navyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navyNeeded.Location = new System.Drawing.Point(217, 262);
+            this.navyNeeded.Name = "navyNeeded";
+            this.navyNeeded.Size = new System.Drawing.Size(145, 20);
+            this.navyNeeded.TabIndex = 51;
+            this.navyNeeded.Text = "-";
+            this.navyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // navyCases
+            // 
+            this.navyCases.AutoSize = true;
+            this.navyCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navyCases.Location = new System.Drawing.Point(156, 262);
+            this.navyCases.Name = "navyCases";
+            this.navyCases.Size = new System.Drawing.Size(54, 20);
+            this.navyCases.TabIndex = 50;
+            this.navyCases.Text = "-";
+            this.navyCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nbQty
+            // 
+            this.nbQty.AutoSize = true;
+            this.nbQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nbQty.Location = new System.Drawing.Point(95, 262);
+            this.nbQty.Name = "nbQty";
+            this.nbQty.Size = new System.Drawing.Size(54, 20);
+            this.nbQty.TabIndex = 49;
+            this.nbQty.Text = "-";
+            this.nbQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // agNeeded
+            // 
+            this.agNeeded.AutoSize = true;
+            this.agNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agNeeded.Location = new System.Drawing.Point(217, 241);
+            this.agNeeded.Name = "agNeeded";
+            this.agNeeded.Size = new System.Drawing.Size(145, 20);
+            this.agNeeded.TabIndex = 48;
+            this.agNeeded.Text = "-";
+            this.agNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // agCases
+            // 
+            this.agCases.AutoSize = true;
+            this.agCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agCases.Location = new System.Drawing.Point(156, 241);
+            this.agCases.Name = "agCases";
+            this.agCases.Size = new System.Drawing.Size(54, 20);
+            this.agCases.TabIndex = 47;
+            this.agCases.Text = "-";
+            this.agCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // agQty
+            // 
+            this.agQty.AutoSize = true;
+            this.agQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agQty.Location = new System.Drawing.Point(95, 241);
+            this.agQty.Name = "agQty";
+            this.agQty.Size = new System.Drawing.Size(54, 20);
+            this.agQty.TabIndex = 46;
+            this.agQty.Text = "0";
+            this.agQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltPinkNeeded
+            // 
+            this.ltPinkNeeded.AutoSize = true;
+            this.ltPinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltPinkNeeded.Location = new System.Drawing.Point(217, 220);
+            this.ltPinkNeeded.Name = "ltPinkNeeded";
+            this.ltPinkNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ltPinkNeeded.TabIndex = 45;
+            this.ltPinkNeeded.Text = "-";
+            this.ltPinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltPinkCases
+            // 
+            this.ltPinkCases.AutoSize = true;
+            this.ltPinkCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltPinkCases.Location = new System.Drawing.Point(156, 220);
+            this.ltPinkCases.Name = "ltPinkCases";
+            this.ltPinkCases.Size = new System.Drawing.Size(54, 20);
+            this.ltPinkCases.TabIndex = 44;
+            this.ltPinkCases.Text = "-";
+            this.ltPinkCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltPinkQty
+            // 
+            this.ltPinkQty.AutoSize = true;
+            this.ltPinkQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltPinkQty.Location = new System.Drawing.Point(95, 220);
+            this.ltPinkQty.Name = "ltPinkQty";
+            this.ltPinkQty.Size = new System.Drawing.Size(54, 20);
+            this.ltPinkQty.TabIndex = 43;
+            this.ltPinkQty.Text = "0";
+            this.ltPinkQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltBlueNeeded
+            // 
+            this.ltBlueNeeded.AutoSize = true;
+            this.ltBlueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltBlueNeeded.Location = new System.Drawing.Point(217, 199);
+            this.ltBlueNeeded.Name = "ltBlueNeeded";
+            this.ltBlueNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ltBlueNeeded.TabIndex = 42;
+            this.ltBlueNeeded.Text = "-";
+            this.ltBlueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltBlueCases
+            // 
+            this.ltBlueCases.AutoSize = true;
+            this.ltBlueCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltBlueCases.Location = new System.Drawing.Point(156, 199);
+            this.ltBlueCases.Name = "ltBlueCases";
+            this.ltBlueCases.Size = new System.Drawing.Size(54, 20);
+            this.ltBlueCases.TabIndex = 41;
+            this.ltBlueCases.Text = "-";
+            this.ltBlueCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ltBlueQty
+            // 
+            this.ltBlueQty.AutoSize = true;
+            this.ltBlueQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltBlueQty.Location = new System.Drawing.Point(95, 199);
+            this.ltBlueQty.Name = "ltBlueQty";
+            this.ltBlueQty.Size = new System.Drawing.Size(54, 20);
+            this.ltBlueQty.TabIndex = 40;
+            this.ltBlueQty.Text = "0";
+            this.ltBlueQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lavenderNeeded
+            // 
+            this.lavenderNeeded.AutoSize = true;
+            this.lavenderNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lavenderNeeded.Location = new System.Drawing.Point(217, 178);
+            this.lavenderNeeded.Name = "lavenderNeeded";
+            this.lavenderNeeded.Size = new System.Drawing.Size(145, 20);
+            this.lavenderNeeded.TabIndex = 39;
+            this.lavenderNeeded.Text = "-";
+            this.lavenderNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lavenderCases
+            // 
+            this.lavenderCases.AutoSize = true;
+            this.lavenderCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lavenderCases.Location = new System.Drawing.Point(156, 178);
+            this.lavenderCases.Name = "lavenderCases";
+            this.lavenderCases.Size = new System.Drawing.Size(54, 20);
+            this.lavenderCases.TabIndex = 38;
+            this.lavenderCases.Text = "-";
+            this.lavenderCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lavenderQty
+            // 
+            this.lavenderQty.AutoSize = true;
+            this.lavenderQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lavenderQty.Location = new System.Drawing.Point(95, 178);
+            this.lavenderQty.Name = "lavenderQty";
+            this.lavenderQty.Size = new System.Drawing.Size(54, 20);
+            this.lavenderQty.TabIndex = 37;
+            this.lavenderQty.Text = "0";
+            this.lavenderQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ivoryNeeded
+            // 
+            this.ivoryNeeded.AutoSize = true;
+            this.ivoryNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ivoryNeeded.Location = new System.Drawing.Point(217, 157);
+            this.ivoryNeeded.Name = "ivoryNeeded";
+            this.ivoryNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ivoryNeeded.TabIndex = 36;
+            this.ivoryNeeded.Text = "-";
+            this.ivoryNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ivoryCases
+            // 
+            this.ivoryCases.AutoSize = true;
+            this.ivoryCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ivoryCases.Location = new System.Drawing.Point(156, 157);
+            this.ivoryCases.Name = "ivoryCases";
+            this.ivoryCases.Size = new System.Drawing.Size(54, 20);
+            this.ivoryCases.TabIndex = 35;
+            this.ivoryCases.Text = "-";
+            this.ivoryCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ivoryQty
+            // 
+            this.ivoryQty.AutoSize = true;
+            this.ivoryQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ivoryQty.Location = new System.Drawing.Point(95, 157);
+            this.ivoryQty.Name = "ivoryQty";
+            this.ivoryQty.Size = new System.Drawing.Size(54, 20);
+            this.ivoryQty.TabIndex = 34;
+            this.ivoryQty.Text = "0";
+            this.ivoryQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // greenNeeded
+            // 
+            this.greenNeeded.AutoSize = true;
+            this.greenNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.greenNeeded.Location = new System.Drawing.Point(217, 136);
+            this.greenNeeded.Name = "greenNeeded";
+            this.greenNeeded.Size = new System.Drawing.Size(145, 20);
+            this.greenNeeded.TabIndex = 33;
+            this.greenNeeded.Text = "-";
+            this.greenNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // greenCases
+            // 
+            this.greenCases.AutoSize = true;
+            this.greenCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.greenCases.Location = new System.Drawing.Point(156, 136);
+            this.greenCases.Name = "greenCases";
+            this.greenCases.Size = new System.Drawing.Size(54, 20);
+            this.greenCases.TabIndex = 32;
+            this.greenCases.Text = "-";
+            this.greenCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // greenQty
+            // 
+            this.greenQty.AutoSize = true;
+            this.greenQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.greenQty.Location = new System.Drawing.Point(95, 136);
+            this.greenQty.Name = "greenQty";
+            this.greenQty.Size = new System.Drawing.Size(54, 20);
+            this.greenQty.TabIndex = 31;
+            this.greenQty.Text = "0";
+            this.greenQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fuchsiaNeeded
+            // 
+            this.fuchsiaNeeded.AutoSize = true;
+            this.fuchsiaNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuchsiaNeeded.Location = new System.Drawing.Point(217, 115);
+            this.fuchsiaNeeded.Name = "fuchsiaNeeded";
+            this.fuchsiaNeeded.Size = new System.Drawing.Size(145, 20);
+            this.fuchsiaNeeded.TabIndex = 30;
+            this.fuchsiaNeeded.Text = "-";
+            this.fuchsiaNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fuchsiaCases
+            // 
+            this.fuchsiaCases.AutoSize = true;
+            this.fuchsiaCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuchsiaCases.Location = new System.Drawing.Point(156, 115);
+            this.fuchsiaCases.Name = "fuchsiaCases";
+            this.fuchsiaCases.Size = new System.Drawing.Size(54, 20);
+            this.fuchsiaCases.TabIndex = 29;
+            this.fuchsiaCases.Text = "-";
+            this.fuchsiaCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fuchsiaQty
+            // 
+            this.fuchsiaQty.AutoSize = true;
+            this.fuchsiaQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuchsiaQty.Location = new System.Drawing.Point(95, 115);
+            this.fuchsiaQty.Name = "fuchsiaQty";
+            this.fuchsiaQty.Size = new System.Drawing.Size(54, 20);
+            this.fuchsiaQty.TabIndex = 28;
+            this.fuchsiaQty.Text = "0";
+            this.fuchsiaQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // burgundyNeeded
+            // 
+            this.burgundyNeeded.AutoSize = true;
+            this.burgundyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.burgundyNeeded.Location = new System.Drawing.Point(217, 94);
+            this.burgundyNeeded.Name = "burgundyNeeded";
+            this.burgundyNeeded.Size = new System.Drawing.Size(145, 20);
+            this.burgundyNeeded.TabIndex = 27;
+            this.burgundyNeeded.Text = "-";
+            this.burgundyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // burgundCases
+            // 
+            this.burgundCases.AutoSize = true;
+            this.burgundCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.burgundCases.Location = new System.Drawing.Point(156, 94);
+            this.burgundCases.Name = "burgundCases";
+            this.burgundCases.Size = new System.Drawing.Size(54, 20);
+            this.burgundCases.TabIndex = 26;
+            this.burgundCases.Text = "-";
+            this.burgundCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // blueNeeded
+            // 
+            this.blueNeeded.AutoSize = true;
+            this.blueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueNeeded.Location = new System.Drawing.Point(217, 73);
+            this.blueNeeded.Name = "blueNeeded";
+            this.blueNeeded.Size = new System.Drawing.Size(145, 20);
+            this.blueNeeded.TabIndex = 25;
+            this.blueNeeded.Text = "-";
+            this.blueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // blueCases
+            // 
+            this.blueCases.AutoSize = true;
+            this.blueCases.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueCases.Location = new System.Drawing.Point(156, 73);
+            this.blueCases.Name = "blueCases";
+            this.blueCases.Size = new System.Drawing.Size(54, 20);
+            this.blueCases.TabIndex = 24;
+            this.blueCases.Text = "-";
+            this.blueCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // blackNeeded
+            // 
+            this.blackNeeded.AutoSize = true;
+            this.blackNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blackNeeded.Location = new System.Drawing.Point(217, 52);
+            this.blackNeeded.Name = "blackNeeded";
+            this.blackNeeded.Size = new System.Drawing.Size(145, 20);
+            this.blackNeeded.TabIndex = 23;
+            this.blackNeeded.Text = "-";
+            this.blackNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // blueQty
+            // 
+            this.blueQty.AutoSize = true;
+            this.blueQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueQty.Location = new System.Drawing.Point(95, 73);
+            this.blueQty.Name = "blueQty";
+            this.blueQty.Size = new System.Drawing.Size(54, 20);
+            this.blueQty.TabIndex = 21;
+            this.blueQty.Text = "0";
+            this.blueQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blackCases
             // 
@@ -904,7 +1004,7 @@
             this.blackCases.Name = "blackCases";
             this.blackCases.Size = new System.Drawing.Size(54, 20);
             this.blackCases.TabIndex = 21;
-            this.blackCases.Text = "0";
+            this.blackCases.Text = "-";
             this.blackCases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label24
@@ -916,7 +1016,7 @@
             this.label24.Location = new System.Drawing.Point(214, 11);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(148, 40);
+            this.label24.Size = new System.Drawing.Size(151, 40);
             this.label24.TabIndex = 19;
             this.label24.Text = "Needed For Complete Case";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1184,16 +1284,29 @@
             this.blackQty.Text = "0";
             this.blackQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // burgundyQty
             // 
-            this.label26.AutoSize = true;
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(95, 94);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(54, 20);
-            this.label26.TabIndex = 22;
-            this.label26.Text = "0";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.burgundyQty.AutoSize = true;
+            this.burgundyQty.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.burgundyQty.Location = new System.Drawing.Point(95, 94);
+            this.burgundyQty.Name = "burgundyQty";
+            this.burgundyQty.Size = new System.Drawing.Size(54, 20);
+            this.burgundyQty.TabIndex = 22;
+            this.burgundyQty.Text = "0";
+            this.burgundyQty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label83.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label83.Location = new System.Drawing.Point(214, 451);
+            this.label83.Margin = new System.Windows.Forms.Padding(0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(151, 20);
+            this.label83.TabIndex = 76;
+            this.label83.Text = "-";
+            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -1222,119 +1335,6 @@
             this.lblTotalOrders.TabIndex = 0;
             this.lblTotalOrders.Text = "Total Orders:";
             // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(139, 68);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(107, 17);
-            this.label80.TabIndex = 5;
-            this.label80.Text = "Inbound Rolls";
-            // 
-            // totalOrders
-            // 
-            this.totalOrders.AutoSize = true;
-            this.totalOrders.Location = new System.Drawing.Point(94, 12);
-            this.totalOrders.Name = "totalOrders";
-            this.totalOrders.Size = new System.Drawing.Size(13, 13);
-            this.totalOrders.TabIndex = 6;
-            this.totalOrders.Text = "0";
-            // 
-            // pendingOrders
-            // 
-            this.pendingOrders.AutoSize = true;
-            this.pendingOrders.Location = new System.Drawing.Point(254, 12);
-            this.pendingOrders.Name = "pendingOrders";
-            this.pendingOrders.Size = new System.Drawing.Size(13, 13);
-            this.pendingOrders.TabIndex = 7;
-            this.pendingOrders.Text = "0";
-            // 
-            // shippedOrders
-            // 
-            this.shippedOrders.AutoSize = true;
-            this.shippedOrders.Location = new System.Drawing.Point(416, 12);
-            this.shippedOrders.Name = "shippedOrders";
-            this.shippedOrders.Size = new System.Drawing.Size(13, 13);
-            this.shippedOrders.TabIndex = 8;
-            this.shippedOrders.Text = "0";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label81.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label81.Location = new System.Drawing.Point(92, 451);
-            this.label81.Margin = new System.Windows.Forms.Padding(0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(60, 20);
-            this.label81.TabIndex = 9;
-            this.label81.Text = "0";
-            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label82.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label82.Location = new System.Drawing.Point(153, 451);
-            this.label82.Margin = new System.Windows.Forms.Padding(0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(60, 20);
-            this.label82.TabIndex = 9;
-            this.label82.Text = "0";
-            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label83.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label83.Location = new System.Drawing.Point(214, 451);
-            this.label83.Margin = new System.Windows.Forms.Padding(0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(148, 20);
-            this.label83.TabIndex = 76;
-            this.label83.Text = "0";
-            this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label84.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label84.Location = new System.Drawing.Point(11, 451);
-            this.label84.Margin = new System.Windows.Forms.Padding(0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(80, 20);
-            this.label84.TabIndex = 77;
-            this.label84.Text = "Totals";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(432, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(813, 507);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // searchOrdersToolStripMenuItem
-            // 
-            this.searchOrdersToolStripMenuItem.Name = "searchOrdersToolStripMenuItem";
-            this.searchOrdersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.searchOrdersToolStripMenuItem.Text = "Search Orders";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(781, 68);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(114, 17);
-            this.label85.TabIndex = 10;
-            this.label85.Text = "Recent Orders";
-            // 
             // Tulle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1344,6 +1344,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tulle";
             this.Text = "Tulle";
+            this.Load += new System.EventHandler(this.Tulle_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1352,9 +1353,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1393,66 +1394,66 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label blackQty;
         private System.Windows.Forms.Label blackCases;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label blueQty;
+        private System.Windows.Forms.Label yellowNeeded;
+        private System.Windows.Forms.Label yellowCases;
+        private System.Windows.Forms.Label yellowQty;
+        private System.Windows.Forms.Label whiteNeeded;
+        private System.Windows.Forms.Label whiteCases;
+        private System.Windows.Forms.Label whiteQty;
+        private System.Windows.Forms.Label turquoiseNeeded;
+        private System.Windows.Forms.Label turqoiseCases;
+        private System.Windows.Forms.Label turquoiseQty;
+        private System.Windows.Forms.Label silverNeeded;
+        private System.Windows.Forms.Label silverCases;
+        private System.Windows.Forms.Label silverQty;
+        private System.Windows.Forms.Label redNeeded;
+        private System.Windows.Forms.Label redCases;
+        private System.Windows.Forms.Label redQty;
+        private System.Windows.Forms.Label purpleNeeded;
+        private System.Windows.Forms.Label purpleCases;
+        private System.Windows.Forms.Label purpleQty;
+        private System.Windows.Forms.Label pinkNeeded;
+        private System.Windows.Forms.Label pinkCases;
+        private System.Windows.Forms.Label pinkQty;
+        private System.Windows.Forms.Label orangeNeeded;
+        private System.Windows.Forms.Label orangeCases;
+        private System.Windows.Forms.Label orangeQty;
+        private System.Windows.Forms.Label navyNeeded;
+        private System.Windows.Forms.Label navyCases;
+        private System.Windows.Forms.Label nbQty;
+        private System.Windows.Forms.Label agNeeded;
+        private System.Windows.Forms.Label agCases;
+        private System.Windows.Forms.Label agQty;
+        private System.Windows.Forms.Label ltPinkNeeded;
+        private System.Windows.Forms.Label ltPinkCases;
+        private System.Windows.Forms.Label ltPinkQty;
+        private System.Windows.Forms.Label ltBlueNeeded;
+        private System.Windows.Forms.Label ltBlueCases;
+        private System.Windows.Forms.Label ltBlueQty;
+        private System.Windows.Forms.Label lavenderNeeded;
+        private System.Windows.Forms.Label lavenderCases;
+        private System.Windows.Forms.Label lavenderQty;
+        private System.Windows.Forms.Label ivoryNeeded;
+        private System.Windows.Forms.Label ivoryCases;
+        private System.Windows.Forms.Label ivoryQty;
+        private System.Windows.Forms.Label greenNeeded;
+        private System.Windows.Forms.Label greenCases;
+        private System.Windows.Forms.Label greenQty;
+        private System.Windows.Forms.Label fuchsiaNeeded;
+        private System.Windows.Forms.Label fuchsiaCases;
+        private System.Windows.Forms.Label fuchsiaQty;
+        private System.Windows.Forms.Label burgundyNeeded;
+        private System.Windows.Forms.Label burgundCases;
+        private System.Windows.Forms.Label blueNeeded;
+        private System.Windows.Forms.Label blueCases;
+        private System.Windows.Forms.Label blackNeeded;
+        private System.Windows.Forms.Label burgundyQty;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label totalOrders;
         private System.Windows.Forms.Label pendingOrders;
         private System.Windows.Forms.Label shippedOrders;
-        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Label totalRollQty;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label84;
