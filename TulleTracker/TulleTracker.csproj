@@ -83,6 +83,12 @@
     <Compile Include="Pages\AddProduct.Designer.cs">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EditOrder.Designer.cs">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EditOrder.resx">
+      <DependentUpon>EditOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>

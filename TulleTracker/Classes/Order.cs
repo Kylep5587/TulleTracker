@@ -231,5 +231,24 @@ namespace TulleTracker.Classes
             return returnNumbers;
         }
 
+
+        /* Populate orders DGV headers and rows
+         * *****************************/
+        public void PopulateDGV(DataGridView DGV, string query)
+        {
+            if (db.PopulateDGV(DGV, query))
+            {
+                DGV.Columns[0].HeaderText = "Order ID";
+                DGV.Columns[1].HeaderText = "Order Date";
+                DGV.Columns[2].HeaderText = "Status";
+                DGV.Columns[3].HeaderText = "Colors";
+                DGV.Columns[4].HeaderText = "Delivery Date";
+                DGV.Columns[5].HeaderText = "Order Total";
+
+                DGV.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+        }
+
     }
 }

@@ -39,6 +39,12 @@ namespace TulleTracker.Pages
             shippedOrders.Text = getShippedCMD.ExecuteScalar().ToString();
             db.CloseConnection();
 
+            cbOrderStatus.SelectedIndex = 0;
+
+            string defaultDgvQuery = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                                        " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Pending' OR o.orderStatus = 'Shipped' GROUP BY o.orderID ORDER BY orderDate DESC; ";
+            o.PopulateDGV(dgvOrders, defaultDgvQuery);
+
             foreach (var item in Enum.GetValues(typeof(Globals.TulleColors)))
             {
 
@@ -220,6 +226,31 @@ namespace TulleTracker.Pages
                 }
 
             }
+            
+        }
+
+
+        // Handles error caused by clicking on row header
+        private void dgvOrders_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        /* Open Edit Form When Row Double Clicked
+        **********************************/
+        private void dgvOrders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            if (index >= 0) // Only perform actions if the selected row is part of the table - Fixes issue error from clicking on cell header
+            {
+                DataGridViewRow selectedRow = dgvOrders.Rows[index];
+
+                // Assign values and populate editable fields
+                string orderID = selectedRow.Cells[0].Value.ToString();
+                EditOrder form = new EditOrder(orderID);
+                form.ShowDialog();
+            }
+
             
         }
     }

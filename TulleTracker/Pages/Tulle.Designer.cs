@@ -31,9 +31,10 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbOrderStatus = new System.Windows.Forms.ComboBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.shippedOrders = new System.Windows.Forms.Label();
             this.pendingOrders = new System.Windows.Forms.Label();
             this.totalOrders = new System.Windows.Forms.Label();
@@ -131,7 +132,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,8 +149,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.cbOrderStatus);
+            this.splitContainer1.Panel2.Controls.Add(this.lblStatus);
             this.splitContainer1.Panel2.Controls.Add(this.label85);
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvOrders);
             this.splitContainer1.Panel2.Controls.Add(this.shippedOrders);
             this.splitContainer1.Panel2.Controls.Add(this.pendingOrders);
             this.splitContainer1.Panel2.Controls.Add(this.totalOrders);
@@ -158,15 +161,14 @@
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.lblPending);
             this.splitContainer1.Panel2.Controls.Add(this.lblTotalOrders);
-            this.splitContainer1.Size = new System.Drawing.Size(1273, 654);
-            this.splitContainer1.SplitterDistance = 25;
+            this.splitContainer1.Size = new System.Drawing.Size(1273, 791);
+            this.splitContainer1.SplitterDistance = 30;
             this.splitContainer1.TabIndex = 0;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nToolStripMenuItem,
-            this.searchOrdersToolStripMenuItem});
+            this.nToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1273, 24);
@@ -180,29 +182,61 @@
             this.nToolStripMenuItem.Text = "New Order";
             this.nToolStripMenuItem.Click += new System.EventHandler(this.nToolStripMenuItem_Click);
             // 
-            // searchOrdersToolStripMenuItem
+            // cbOrderStatus
             // 
-            this.searchOrdersToolStripMenuItem.Name = "searchOrdersToolStripMenuItem";
-            this.searchOrdersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.searchOrdersToolStripMenuItem.Text = "Search Orders";
+            this.cbOrderStatus.FormattingEnabled = true;
+            this.cbOrderStatus.Items.AddRange(new object[] {
+            "Pending or Shipped",
+            "Pending",
+            "Shipped",
+            "Received"});
+            this.cbOrderStatus.Location = new System.Drawing.Point(507, 64);
+            this.cbOrderStatus.Name = "cbOrderStatus";
+            this.cbOrderStatus.Size = new System.Drawing.Size(144, 21);
+            this.cbOrderStatus.TabIndex = 12;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(432, 68);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(69, 13);
+            this.lblStatus.TabIndex = 11;
+            this.lblStatus.Text = "Order Status:";
             // 
             // label85
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(781, 68);
+            this.label85.Location = new System.Drawing.Point(924, 68);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(114, 17);
             this.label85.TabIndex = 10;
             this.label85.Text = "Recent Orders";
             // 
-            // dataGridView1
+            // dgvOrders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(432, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(813, 507);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvOrders.AllowUserToAddRows = false;
+            this.dgvOrders.AllowUserToDeleteRows = false;
+            this.dgvOrders.AllowUserToResizeColumns = false;
+            this.dgvOrders.AllowUserToResizeRows = false;
+            this.dgvOrders.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(432, 92);
+            this.dgvOrders.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.ReadOnly = true;
+            this.dgvOrders.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvOrders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvOrders.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvOrders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrders.Size = new System.Drawing.Size(813, 651);
+            this.dgvOrders.TabIndex = 9;
+            this.dgvOrders.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellDoubleClick);
+            this.dgvOrders.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvOrders_RowHeaderMouseClick);
             // 
             // shippedOrders
             // 
@@ -248,7 +282,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Controls.Add(this.label84, 0, 20);
             this.tableLayoutPanel1.Controls.Add(this.label82, 2, 20);
             this.tableLayoutPanel1.Controls.Add(this.totalRollQty, 1, 20);
@@ -360,7 +394,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(366, 482);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(373, 482);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // label84
@@ -408,7 +442,7 @@
             this.yellowNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.yellowNeeded.Location = new System.Drawing.Point(217, 430);
             this.yellowNeeded.Name = "yellowNeeded";
-            this.yellowNeeded.Size = new System.Drawing.Size(145, 20);
+            this.yellowNeeded.Size = new System.Drawing.Size(147, 20);
             this.yellowNeeded.TabIndex = 75;
             this.yellowNeeded.Text = "-";
             this.yellowNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -441,7 +475,7 @@
             this.whiteNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.whiteNeeded.Location = new System.Drawing.Point(217, 409);
             this.whiteNeeded.Name = "whiteNeeded";
-            this.whiteNeeded.Size = new System.Drawing.Size(145, 20);
+            this.whiteNeeded.Size = new System.Drawing.Size(147, 20);
             this.whiteNeeded.TabIndex = 72;
             this.whiteNeeded.Text = "-";
             this.whiteNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,7 +508,7 @@
             this.turquoiseNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.turquoiseNeeded.Location = new System.Drawing.Point(217, 388);
             this.turquoiseNeeded.Name = "turquoiseNeeded";
-            this.turquoiseNeeded.Size = new System.Drawing.Size(145, 20);
+            this.turquoiseNeeded.Size = new System.Drawing.Size(147, 20);
             this.turquoiseNeeded.TabIndex = 69;
             this.turquoiseNeeded.Text = "-";
             this.turquoiseNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -507,7 +541,7 @@
             this.silverNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.silverNeeded.Location = new System.Drawing.Point(217, 367);
             this.silverNeeded.Name = "silverNeeded";
-            this.silverNeeded.Size = new System.Drawing.Size(145, 20);
+            this.silverNeeded.Size = new System.Drawing.Size(147, 20);
             this.silverNeeded.TabIndex = 66;
             this.silverNeeded.Text = "-";
             this.silverNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,7 +574,7 @@
             this.redNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.redNeeded.Location = new System.Drawing.Point(217, 346);
             this.redNeeded.Name = "redNeeded";
-            this.redNeeded.Size = new System.Drawing.Size(145, 20);
+            this.redNeeded.Size = new System.Drawing.Size(147, 20);
             this.redNeeded.TabIndex = 63;
             this.redNeeded.Text = "-";
             this.redNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -573,7 +607,7 @@
             this.purpleNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.purpleNeeded.Location = new System.Drawing.Point(217, 325);
             this.purpleNeeded.Name = "purpleNeeded";
-            this.purpleNeeded.Size = new System.Drawing.Size(145, 20);
+            this.purpleNeeded.Size = new System.Drawing.Size(147, 20);
             this.purpleNeeded.TabIndex = 60;
             this.purpleNeeded.Text = "-";
             this.purpleNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,7 +640,7 @@
             this.pinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinkNeeded.Location = new System.Drawing.Point(217, 304);
             this.pinkNeeded.Name = "pinkNeeded";
-            this.pinkNeeded.Size = new System.Drawing.Size(145, 20);
+            this.pinkNeeded.Size = new System.Drawing.Size(147, 20);
             this.pinkNeeded.TabIndex = 57;
             this.pinkNeeded.Text = "-";
             this.pinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -639,7 +673,7 @@
             this.orangeNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orangeNeeded.Location = new System.Drawing.Point(217, 283);
             this.orangeNeeded.Name = "orangeNeeded";
-            this.orangeNeeded.Size = new System.Drawing.Size(145, 20);
+            this.orangeNeeded.Size = new System.Drawing.Size(147, 20);
             this.orangeNeeded.TabIndex = 54;
             this.orangeNeeded.Text = "-";
             this.orangeNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -672,7 +706,7 @@
             this.navyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navyNeeded.Location = new System.Drawing.Point(217, 262);
             this.navyNeeded.Name = "navyNeeded";
-            this.navyNeeded.Size = new System.Drawing.Size(145, 20);
+            this.navyNeeded.Size = new System.Drawing.Size(147, 20);
             this.navyNeeded.TabIndex = 51;
             this.navyNeeded.Text = "-";
             this.navyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -705,7 +739,7 @@
             this.agNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.agNeeded.Location = new System.Drawing.Point(217, 241);
             this.agNeeded.Name = "agNeeded";
-            this.agNeeded.Size = new System.Drawing.Size(145, 20);
+            this.agNeeded.Size = new System.Drawing.Size(147, 20);
             this.agNeeded.TabIndex = 48;
             this.agNeeded.Text = "-";
             this.agNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -738,7 +772,7 @@
             this.ltPinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltPinkNeeded.Location = new System.Drawing.Point(217, 220);
             this.ltPinkNeeded.Name = "ltPinkNeeded";
-            this.ltPinkNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ltPinkNeeded.Size = new System.Drawing.Size(147, 20);
             this.ltPinkNeeded.TabIndex = 45;
             this.ltPinkNeeded.Text = "-";
             this.ltPinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -771,7 +805,7 @@
             this.ltBlueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltBlueNeeded.Location = new System.Drawing.Point(217, 199);
             this.ltBlueNeeded.Name = "ltBlueNeeded";
-            this.ltBlueNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ltBlueNeeded.Size = new System.Drawing.Size(147, 20);
             this.ltBlueNeeded.TabIndex = 42;
             this.ltBlueNeeded.Text = "-";
             this.ltBlueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,7 +838,7 @@
             this.lavenderNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lavenderNeeded.Location = new System.Drawing.Point(217, 178);
             this.lavenderNeeded.Name = "lavenderNeeded";
-            this.lavenderNeeded.Size = new System.Drawing.Size(145, 20);
+            this.lavenderNeeded.Size = new System.Drawing.Size(147, 20);
             this.lavenderNeeded.TabIndex = 39;
             this.lavenderNeeded.Text = "-";
             this.lavenderNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -837,7 +871,7 @@
             this.ivoryNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ivoryNeeded.Location = new System.Drawing.Point(217, 157);
             this.ivoryNeeded.Name = "ivoryNeeded";
-            this.ivoryNeeded.Size = new System.Drawing.Size(145, 20);
+            this.ivoryNeeded.Size = new System.Drawing.Size(147, 20);
             this.ivoryNeeded.TabIndex = 36;
             this.ivoryNeeded.Text = "-";
             this.ivoryNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -870,7 +904,7 @@
             this.greenNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.greenNeeded.Location = new System.Drawing.Point(217, 136);
             this.greenNeeded.Name = "greenNeeded";
-            this.greenNeeded.Size = new System.Drawing.Size(145, 20);
+            this.greenNeeded.Size = new System.Drawing.Size(147, 20);
             this.greenNeeded.TabIndex = 33;
             this.greenNeeded.Text = "-";
             this.greenNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -903,7 +937,7 @@
             this.fuchsiaNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fuchsiaNeeded.Location = new System.Drawing.Point(217, 115);
             this.fuchsiaNeeded.Name = "fuchsiaNeeded";
-            this.fuchsiaNeeded.Size = new System.Drawing.Size(145, 20);
+            this.fuchsiaNeeded.Size = new System.Drawing.Size(147, 20);
             this.fuchsiaNeeded.TabIndex = 30;
             this.fuchsiaNeeded.Text = "-";
             this.fuchsiaNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -936,7 +970,7 @@
             this.burgundyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.burgundyNeeded.Location = new System.Drawing.Point(217, 94);
             this.burgundyNeeded.Name = "burgundyNeeded";
-            this.burgundyNeeded.Size = new System.Drawing.Size(145, 20);
+            this.burgundyNeeded.Size = new System.Drawing.Size(147, 20);
             this.burgundyNeeded.TabIndex = 27;
             this.burgundyNeeded.Text = "-";
             this.burgundyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -958,7 +992,7 @@
             this.blueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blueNeeded.Location = new System.Drawing.Point(217, 73);
             this.blueNeeded.Name = "blueNeeded";
-            this.blueNeeded.Size = new System.Drawing.Size(145, 20);
+            this.blueNeeded.Size = new System.Drawing.Size(147, 20);
             this.blueNeeded.TabIndex = 25;
             this.blueNeeded.Text = "-";
             this.blueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -980,7 +1014,7 @@
             this.blackNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blackNeeded.Location = new System.Drawing.Point(217, 52);
             this.blackNeeded.Name = "blackNeeded";
-            this.blackNeeded.Size = new System.Drawing.Size(145, 20);
+            this.blackNeeded.Size = new System.Drawing.Size(147, 20);
             this.blackNeeded.TabIndex = 23;
             this.blackNeeded.Text = "-";
             this.blackNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1016,7 +1050,7 @@
             this.label24.Location = new System.Drawing.Point(214, 11);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(151, 40);
+            this.label24.Size = new System.Drawing.Size(153, 40);
             this.label24.TabIndex = 19;
             this.label24.Text = "Needed For Complete Case";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1303,7 +1337,7 @@
             this.label83.Location = new System.Drawing.Point(214, 451);
             this.label83.Margin = new System.Windows.Forms.Padding(0);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(151, 20);
+            this.label83.Size = new System.Drawing.Size(153, 20);
             this.label83.TabIndex = 76;
             this.label83.Text = "-";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1339,7 +1373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1273, 654);
+            this.ClientSize = new System.Drawing.Size(1273, 791);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tulle";
@@ -1353,7 +1387,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -1457,8 +1491,9 @@
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.ToolStripMenuItem searchOrdersToolStripMenuItem;
         private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOrders;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.ComboBox cbOrderStatus;
     }
 }
