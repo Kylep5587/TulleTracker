@@ -14,15 +14,17 @@ namespace TulleTracker.Pages
 {
     public partial class TulleOrder : Form
     {
+        Tulle owner;
         Order no = new Order();
         int currentLblPointY;
         int currentInputPointY;
         int currentAddBtnY;
         int itemOrderQty;
 
-        public TulleOrder()
+        public TulleOrder(Tulle formOwner)
         {
             InitializeComponent();
+            owner = formOwner;
             currentLblPointY = 70;
             currentInputPointY = 66;
             currentAddBtnY = 100;
@@ -33,6 +35,8 @@ namespace TulleTracker.Pages
         }
 
 
+        /* Updates the quantity of items in the order - pass by reference
+        **********************************/
         private void SetOrderItemQty(ref int itemOrderQty)
         {
             itemOrderQty++;
@@ -143,6 +147,14 @@ namespace TulleTracker.Pages
             {
                 this.Close();
             }
+        }
+
+
+        /* Refreshes the DGV as form closes
+        **********************************/
+        private void TulleOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            owner.RefreshOrderDGV();
         }
     }
 }

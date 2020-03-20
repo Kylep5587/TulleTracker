@@ -132,6 +132,95 @@ namespace TulleTracker.Classes
         }
 
 
+        /* Updates Order Data
+        **********************************/
+        public bool Update(string [,] itemData, int originalItemCount)
+        {
+            bool insertError = false;
+            string orderDateSQL = Globals.DateToMySQLString(OrderDate);
+            string deliveryDateSQL = Globals.DateToMySQLString(DeliveryDate);
+
+            // SQL Parameters for query
+            var orderParams = new Dictionary<string, string> {
+                { "@orderID", OrderID },
+                { "@orderDate", orderDateSQL },
+                { "@orderStatus", OrderStatus },
+                { "@deliveryDate", deliveryDateSQL },
+                { "@total", Total.ToString() }
+            };
+
+            string query = "UPDATE TULLE_ORDERS SET orderID = @orderID, orderDate = @orderDate, orderStatus = @orderStatus, deliveryDate = @deliveryDate, total = @total WHERE orderID = @orderID";
+
+            // Create SQL command for insert query
+            MySqlCommand cmd = new MySqlCommand(query, db.conn);
+            foreach (KeyValuePair<string, string> p in orderParams)
+                cmd.Parameters.AddWithValue(p.Key, p.Value);
+
+            if (db.ExecuteCommand(cmd))
+            {
+                for (int i = 0; i < originalItemCount; i++) // Updates the colors for the order
+                {
+                    // SQL Parameters for query
+                    var itemParams = new Dictionary<string, string> {
+                        { "@color", itemData[i,0] },
+                        { "@qty", itemData[i,1] },
+                        { "@orderID", OrderID }
+                    };
+
+                    query = "UPDATE ORDER_ITEMS SET orderID = @orderID, itemQty = @qty, color = @color";
+                    MySqlCommand colors = new MySqlCommand(query, db.conn);
+                    foreach (KeyValuePair<string, string> p in itemParams)
+                        colors.Parameters.AddWithValue(p.Key, p.Value);
+
+                    if (!db.ExecuteCommand(colors))
+                    {
+                        insertError = true;
+                    }
+                }
+
+                if (originalItemCount < ItemCount) // Inserts new order items
+                {
+                    for (int i = originalItemCount - 1; i < ItemCount; i++)
+                    {
+                        // SQL Parameters for query
+                        var itemParams = new Dictionary<string, string> {
+                            { "@color", itemData[i,0] },
+                            { "@qty", itemData[i,1] },
+                            { "@orderID", OrderID }
+                        };
+
+                        query = "INSERT INTO ORDER_ITEMS (orderID, itemQty, color) VALUES (@orderID, @qty, @color)";
+                        MySqlCommand ins = new MySqlCommand(query, db.conn);
+                        foreach (KeyValuePair<string, string> p in itemParams)
+                            ins.Parameters.AddWithValue(p.Key, p.Value);
+
+                        if (!db.ExecuteCommand(ins))
+                        {
+                            insertError = true;
+                        }
+                    }
+                }
+
+                if (!insertError) // No errors updating items 
+                {
+                    MessageBox.Show("Order #" + OrderID + " updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else // Error adding items to order but order added
+                {
+                    MessageBox.Show("Failed to add new items to order #" + OrderID + "!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else // Error inserting the order
+            {
+                MessageBox.Show("Failed to update order #" + OrderID + "!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            
+        }
+
+
         /* Add Color Options to ComboBox
          *  Converts to more readable format
         **********************************/
@@ -248,6 +337,29 @@ namespace TulleTracker.Classes
                 DGV.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
+        }
+
+
+
+        /* Update order shipment status to Received
+        **********************************/
+        public bool ReceiveShipment(string orderID)
+        {
+            string query = "UPDATE TULLE_ORDERS SET orderStatus = 'Received' WHERE orderID = @orderID";
+            MySqlCommand cmd = new MySqlCommand(query, db.conn);
+            cmd.Parameters.AddWithValue("@orderID", orderID);
+
+            db.OpenConnection();
+            if (cmd.ExecuteNonQuery() >= 1)
+            {
+                db.CloseConnection();
+                return true;
+            }
+            else
+            {
+                db.CloseConnection();
+                return false;
+            }
         }
 
     }

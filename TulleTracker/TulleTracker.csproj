@@ -95,6 +95,12 @@
     <Compile Include="Pages\ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReceiveTulleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ReceiveTulleOrder.Designer.cs">
+      <DependentUpon>ReceiveTulleOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Tulle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ReceiveTulleOrder.resx">
+      <DependentUpon>ReceiveTulleOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Tulle.resx">
       <DependentUpon>Tulle.cs</DependentUpon>

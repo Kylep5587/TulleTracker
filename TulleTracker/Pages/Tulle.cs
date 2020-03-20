@@ -15,6 +15,10 @@ namespace TulleTracker.Pages
 {
     public partial class Tulle : Form
     {
+        Order o = new Order();
+        string defaultDgvQuery = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                                        " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Pending' OR o.orderStatus = 'Shipped' GROUP BY o.orderID ORDER BY orderDate DESC; ";
+
         public Tulle()
         {
             InitializeComponent();
@@ -22,13 +26,12 @@ namespace TulleTracker.Pages
 
         private void nToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TulleOrder form = new TulleOrder();
+            TulleOrder form = new TulleOrder(this);
             form.ShowDialog();
         }
 
         private void Tulle_Load(object sender, EventArgs e)
         {
-            Order o = new Order();
             DatabaseHelper db = new DatabaseHelper();
             MySqlCommand getTotalsCMD = new MySqlCommand("SELECT COUNT(*) FROM TULLE_ORDERS", db.conn);
             MySqlCommand getPendingCMD = new MySqlCommand("SELECT COUNT(*) FROM TULLE_ORDERS WHERE orderStatus = 'Pending'", db.conn);
@@ -41,8 +44,6 @@ namespace TulleTracker.Pages
 
             cbOrderStatus.SelectedIndex = 0;
 
-            string defaultDgvQuery = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
-                                        " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Pending' OR o.orderStatus = 'Shipped' GROUP BY o.orderID ORDER BY orderDate DESC; ";
             o.PopulateDGV(dgvOrders, defaultDgvQuery);
 
             foreach (var item in Enum.GetValues(typeof(Globals.TulleColors)))
@@ -247,11 +248,55 @@ namespace TulleTracker.Pages
 
                 // Assign values and populate editable fields
                 string orderID = selectedRow.Cells[0].Value.ToString();
-                EditOrder form = new EditOrder(orderID);
+                EditOrder form = new EditOrder(orderID, this);
                 form.ShowDialog();
             }
 
             
+        }
+
+        private void receiveOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReceiveTulleOrder ro = new ReceiveTulleOrder(this);
+            ro.ShowDialog();
+        }
+
+        private void cbOrderStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string query = "";
+
+            switch (cbOrderStatus.Text.ToLower().Trim())
+            {
+                case "pending":
+                    query = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                            " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Pending' GROUP BY o.orderID ORDER BY orderDate DESC; ";
+                    break;
+                case "shipped":
+                    query = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                            " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Shipped' GROUP BY o.orderID ORDER BY orderDate DESC; ";
+                    break;
+                case "received":
+                    query = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                            " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID WHERE o.orderStatus = 'Received' GROUP BY o.orderID ORDER BY orderDate DESC; ";
+                    break;
+                case "all":
+                    query = "SELECT o.orderID, o.orderDate, o.orderStatus, GROUP_CONCAT(DISTINCT i.color ORDER BY i.color DESC SEPARATOR ', '), o.deliveryDate, o.total " +
+                            " FROM TULLE_ORDERS o JOIN ORDER_ITEMS i ON i.orderID = o.orderID GROUP BY o.orderID ORDER BY orderDate DESC; ";
+                    break;
+                default:
+                    query = defaultDgvQuery;
+                    break;
+            }
+
+            o.PopulateDGV(dgvOrders, query);
+        }
+
+
+        /* Used to populate the order DVG when child form closes
+        **********************************/
+        public void RefreshOrderDGV()
+        {
+            o.PopulateDGV(dgvOrders, defaultDgvQuery);
         }
     }
 }

@@ -56,6 +56,7 @@
             this.btnEditOrder.TabIndex = 29;
             this.btnEditOrder.Text = "Edit Order";
             this.btnEditOrder.UseVisualStyleBackColor = true;
+            this.btnEditOrder.Click += new System.EventHandler(this.btnEditOrder_Click);
             // 
             // tbTotal
             // 
@@ -233,6 +234,7 @@
             this.Controls.Add(this.lblOrderDate);
             this.Name = "EditOrder";
             this.Text = "EditOrder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EditOrder_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

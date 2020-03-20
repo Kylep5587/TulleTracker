@@ -127,6 +127,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblPending = new System.Windows.Forms.Label();
             this.lblTotalOrders = new System.Windows.Forms.Label();
+            this.receiveOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -168,7 +169,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nToolStripMenuItem});
+            this.nToolStripMenuItem,
+            this.receiveOrdersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1273, 24);
@@ -189,11 +191,13 @@
             "Pending or Shipped",
             "Pending",
             "Shipped",
-            "Received"});
+            "Received",
+            "All"});
             this.cbOrderStatus.Location = new System.Drawing.Point(507, 64);
             this.cbOrderStatus.Name = "cbOrderStatus";
             this.cbOrderStatus.Size = new System.Drawing.Size(144, 21);
             this.cbOrderStatus.TabIndex = 12;
+            this.cbOrderStatus.SelectedIndexChanged += new System.EventHandler(this.cbOrderStatus_SelectedIndexChanged);
             // 
             // lblStatus
             // 
@@ -282,7 +286,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
             this.tableLayoutPanel1.Controls.Add(this.label84, 0, 20);
             this.tableLayoutPanel1.Controls.Add(this.label82, 2, 20);
             this.tableLayoutPanel1.Controls.Add(this.totalRollQty, 1, 20);
@@ -442,7 +446,7 @@
             this.yellowNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.yellowNeeded.Location = new System.Drawing.Point(217, 430);
             this.yellowNeeded.Name = "yellowNeeded";
-            this.yellowNeeded.Size = new System.Drawing.Size(147, 20);
+            this.yellowNeeded.Size = new System.Drawing.Size(148, 20);
             this.yellowNeeded.TabIndex = 75;
             this.yellowNeeded.Text = "-";
             this.yellowNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,7 +479,7 @@
             this.whiteNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.whiteNeeded.Location = new System.Drawing.Point(217, 409);
             this.whiteNeeded.Name = "whiteNeeded";
-            this.whiteNeeded.Size = new System.Drawing.Size(147, 20);
+            this.whiteNeeded.Size = new System.Drawing.Size(148, 20);
             this.whiteNeeded.TabIndex = 72;
             this.whiteNeeded.Text = "-";
             this.whiteNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -508,7 +512,7 @@
             this.turquoiseNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.turquoiseNeeded.Location = new System.Drawing.Point(217, 388);
             this.turquoiseNeeded.Name = "turquoiseNeeded";
-            this.turquoiseNeeded.Size = new System.Drawing.Size(147, 20);
+            this.turquoiseNeeded.Size = new System.Drawing.Size(148, 20);
             this.turquoiseNeeded.TabIndex = 69;
             this.turquoiseNeeded.Text = "-";
             this.turquoiseNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -541,7 +545,7 @@
             this.silverNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.silverNeeded.Location = new System.Drawing.Point(217, 367);
             this.silverNeeded.Name = "silverNeeded";
-            this.silverNeeded.Size = new System.Drawing.Size(147, 20);
+            this.silverNeeded.Size = new System.Drawing.Size(148, 20);
             this.silverNeeded.TabIndex = 66;
             this.silverNeeded.Text = "-";
             this.silverNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -574,7 +578,7 @@
             this.redNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.redNeeded.Location = new System.Drawing.Point(217, 346);
             this.redNeeded.Name = "redNeeded";
-            this.redNeeded.Size = new System.Drawing.Size(147, 20);
+            this.redNeeded.Size = new System.Drawing.Size(148, 20);
             this.redNeeded.TabIndex = 63;
             this.redNeeded.Text = "-";
             this.redNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -607,7 +611,7 @@
             this.purpleNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.purpleNeeded.Location = new System.Drawing.Point(217, 325);
             this.purpleNeeded.Name = "purpleNeeded";
-            this.purpleNeeded.Size = new System.Drawing.Size(147, 20);
+            this.purpleNeeded.Size = new System.Drawing.Size(148, 20);
             this.purpleNeeded.TabIndex = 60;
             this.purpleNeeded.Text = "-";
             this.purpleNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,7 +644,7 @@
             this.pinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pinkNeeded.Location = new System.Drawing.Point(217, 304);
             this.pinkNeeded.Name = "pinkNeeded";
-            this.pinkNeeded.Size = new System.Drawing.Size(147, 20);
+            this.pinkNeeded.Size = new System.Drawing.Size(148, 20);
             this.pinkNeeded.TabIndex = 57;
             this.pinkNeeded.Text = "-";
             this.pinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -673,7 +677,7 @@
             this.orangeNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orangeNeeded.Location = new System.Drawing.Point(217, 283);
             this.orangeNeeded.Name = "orangeNeeded";
-            this.orangeNeeded.Size = new System.Drawing.Size(147, 20);
+            this.orangeNeeded.Size = new System.Drawing.Size(148, 20);
             this.orangeNeeded.TabIndex = 54;
             this.orangeNeeded.Text = "-";
             this.orangeNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -706,7 +710,7 @@
             this.navyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navyNeeded.Location = new System.Drawing.Point(217, 262);
             this.navyNeeded.Name = "navyNeeded";
-            this.navyNeeded.Size = new System.Drawing.Size(147, 20);
+            this.navyNeeded.Size = new System.Drawing.Size(148, 20);
             this.navyNeeded.TabIndex = 51;
             this.navyNeeded.Text = "-";
             this.navyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -739,7 +743,7 @@
             this.agNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.agNeeded.Location = new System.Drawing.Point(217, 241);
             this.agNeeded.Name = "agNeeded";
-            this.agNeeded.Size = new System.Drawing.Size(147, 20);
+            this.agNeeded.Size = new System.Drawing.Size(148, 20);
             this.agNeeded.TabIndex = 48;
             this.agNeeded.Text = "-";
             this.agNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -772,7 +776,7 @@
             this.ltPinkNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltPinkNeeded.Location = new System.Drawing.Point(217, 220);
             this.ltPinkNeeded.Name = "ltPinkNeeded";
-            this.ltPinkNeeded.Size = new System.Drawing.Size(147, 20);
+            this.ltPinkNeeded.Size = new System.Drawing.Size(148, 20);
             this.ltPinkNeeded.TabIndex = 45;
             this.ltPinkNeeded.Text = "-";
             this.ltPinkNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -805,7 +809,7 @@
             this.ltBlueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltBlueNeeded.Location = new System.Drawing.Point(217, 199);
             this.ltBlueNeeded.Name = "ltBlueNeeded";
-            this.ltBlueNeeded.Size = new System.Drawing.Size(147, 20);
+            this.ltBlueNeeded.Size = new System.Drawing.Size(148, 20);
             this.ltBlueNeeded.TabIndex = 42;
             this.ltBlueNeeded.Text = "-";
             this.ltBlueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -838,7 +842,7 @@
             this.lavenderNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lavenderNeeded.Location = new System.Drawing.Point(217, 178);
             this.lavenderNeeded.Name = "lavenderNeeded";
-            this.lavenderNeeded.Size = new System.Drawing.Size(147, 20);
+            this.lavenderNeeded.Size = new System.Drawing.Size(148, 20);
             this.lavenderNeeded.TabIndex = 39;
             this.lavenderNeeded.Text = "-";
             this.lavenderNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -871,7 +875,7 @@
             this.ivoryNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ivoryNeeded.Location = new System.Drawing.Point(217, 157);
             this.ivoryNeeded.Name = "ivoryNeeded";
-            this.ivoryNeeded.Size = new System.Drawing.Size(147, 20);
+            this.ivoryNeeded.Size = new System.Drawing.Size(148, 20);
             this.ivoryNeeded.TabIndex = 36;
             this.ivoryNeeded.Text = "-";
             this.ivoryNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -904,7 +908,7 @@
             this.greenNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.greenNeeded.Location = new System.Drawing.Point(217, 136);
             this.greenNeeded.Name = "greenNeeded";
-            this.greenNeeded.Size = new System.Drawing.Size(147, 20);
+            this.greenNeeded.Size = new System.Drawing.Size(148, 20);
             this.greenNeeded.TabIndex = 33;
             this.greenNeeded.Text = "-";
             this.greenNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -937,7 +941,7 @@
             this.fuchsiaNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fuchsiaNeeded.Location = new System.Drawing.Point(217, 115);
             this.fuchsiaNeeded.Name = "fuchsiaNeeded";
-            this.fuchsiaNeeded.Size = new System.Drawing.Size(147, 20);
+            this.fuchsiaNeeded.Size = new System.Drawing.Size(148, 20);
             this.fuchsiaNeeded.TabIndex = 30;
             this.fuchsiaNeeded.Text = "-";
             this.fuchsiaNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -970,7 +974,7 @@
             this.burgundyNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.burgundyNeeded.Location = new System.Drawing.Point(217, 94);
             this.burgundyNeeded.Name = "burgundyNeeded";
-            this.burgundyNeeded.Size = new System.Drawing.Size(147, 20);
+            this.burgundyNeeded.Size = new System.Drawing.Size(148, 20);
             this.burgundyNeeded.TabIndex = 27;
             this.burgundyNeeded.Text = "-";
             this.burgundyNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -992,7 +996,7 @@
             this.blueNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blueNeeded.Location = new System.Drawing.Point(217, 73);
             this.blueNeeded.Name = "blueNeeded";
-            this.blueNeeded.Size = new System.Drawing.Size(147, 20);
+            this.blueNeeded.Size = new System.Drawing.Size(148, 20);
             this.blueNeeded.TabIndex = 25;
             this.blueNeeded.Text = "-";
             this.blueNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1014,7 +1018,7 @@
             this.blackNeeded.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blackNeeded.Location = new System.Drawing.Point(217, 52);
             this.blackNeeded.Name = "blackNeeded";
-            this.blackNeeded.Size = new System.Drawing.Size(147, 20);
+            this.blackNeeded.Size = new System.Drawing.Size(148, 20);
             this.blackNeeded.TabIndex = 23;
             this.blackNeeded.Text = "-";
             this.blackNeeded.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1050,7 +1054,7 @@
             this.label24.Location = new System.Drawing.Point(214, 11);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 40);
+            this.label24.Size = new System.Drawing.Size(154, 40);
             this.label24.TabIndex = 19;
             this.label24.Text = "Needed For Complete Case";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1337,7 +1341,7 @@
             this.label83.Location = new System.Drawing.Point(214, 451);
             this.label83.Margin = new System.Windows.Forms.Padding(0);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(153, 20);
+            this.label83.Size = new System.Drawing.Size(154, 20);
             this.label83.TabIndex = 76;
             this.label83.Text = "-";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1368,6 +1372,13 @@
             this.lblTotalOrders.Size = new System.Drawing.Size(68, 13);
             this.lblTotalOrders.TabIndex = 0;
             this.lblTotalOrders.Text = "Total Orders:";
+            // 
+            // receiveOrdersToolStripMenuItem
+            // 
+            this.receiveOrdersToolStripMenuItem.Name = "receiveOrdersToolStripMenuItem";
+            this.receiveOrdersToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.receiveOrdersToolStripMenuItem.Text = "Receive Orders";
+            this.receiveOrdersToolStripMenuItem.Click += new System.EventHandler(this.receiveOrdersToolStripMenuItem_Click);
             // 
             // Tulle
             // 
@@ -1495,5 +1506,6 @@
         private System.Windows.Forms.DataGridView dgvOrders;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ComboBox cbOrderStatus;
+        private System.Windows.Forms.ToolStripMenuItem receiveOrdersToolStripMenuItem;
     }
 }

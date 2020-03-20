@@ -234,6 +234,7 @@
             this.Controls.Add(this.lblOrderDate);
             this.Name = "TulleOrder";
             this.Text = "New Order";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TulleOrder_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

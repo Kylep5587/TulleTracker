@@ -15,11 +15,13 @@ namespace TulleTracker.Pages
 {
     public partial class EditOrder : Form
     {
+        Tulle owner;
         DatabaseHelper db = new DatabaseHelper();
         int currentLblPointY;
         int currentInputPointY;
         int currentAddBtnY;
         int item;
+        int originalItemCount;
 
         // Location of original order item fields
         int qtyLblPointX = 556;
@@ -29,7 +31,7 @@ namespace TulleTracker.Pages
         int colorPointX = 400;
 
         /* Used to calulate the coordinates for next item input fields
-            **********************************/
+        **********************************/
         private void CalculateNewCoordinates(ref int currentLblPointY, ref int currentInputPointY, ref int currentAddBtnY)
         {
             currentInputPointY += 34;
@@ -37,19 +39,37 @@ namespace TulleTracker.Pages
             currentAddBtnY += 34;
         }
 
+
+        /* Updates the quantity of items in the order
+        **********************************/
         private void IncreaseItemCount(ref int item)
         {
             item++;
         }
 
+
+        /* Sets the original number of items in the order
+        **********************************/
+        private void SetOriginalItemCount(ref int originalItemCount, int itemCount)
+        {
+            originalItemCount = itemCount;
+        }
+
+
+        /* Default constructor
+        **********************************/
         public EditOrder()
         {
             InitializeComponent();
         }
 
-        public EditOrder(string orderID)
+
+        /* Constructor with orderID
+        **********************************/
+        public EditOrder(string orderID, Tulle formOwner)
         {
             InitializeComponent();
+            owner = formOwner;
             Order o = new Order();
             o.PopulateOrderStatus(cbOrderStatus);
             string query = "SELECT * FROM TULLE_ORDERS WHERE orderID = @orderID LIMIT 1";
@@ -62,6 +82,7 @@ namespace TulleTracker.Pages
             currentAddBtnY = 102;
 
             int item = 0;
+            int originalItemCount = 1;
 
 
 
@@ -91,7 +112,6 @@ namespace TulleTracker.Pages
                     {
                         try
                         {
-
                             string cbColorInputName = "cbColor" + item;
                             string tbQty = "tbQty" + item;
 
@@ -148,7 +168,8 @@ namespace TulleTracker.Pages
                                 tbQty0.Text = c["itemQty"].ToString();
                             }
 
-                            IncreaseItemCount(ref item);
+                            IncreaseItemCount(ref item); // Increment item count
+                            SetOriginalItemCount(ref originalItemCount, item);
                         }
                         catch (Exception e)
                         {
@@ -209,6 +230,40 @@ namespace TulleTracker.Pages
             this.Controls.Add(btnAddItem);
 
             IncreaseItemCount(ref item);
+        }
+
+        private void btnEditOrder_Click(object sender, EventArgs e)
+        {
+            Order o = new Order()
+            {
+                OrderID = tbOrderID.Text,
+                OrderDate = Convert.ToDateTime(dtpOrderDate.Value),
+                OrderStatus = cbOrderStatus.Text,
+                DeliveryDate = Convert.ToDateTime(dtpDeliveryDate.Value),
+                Total = Convert.ToDecimal(tbTotal.Text),
+                ItemCount = item
+            };
+
+            // Store item information in array
+            string[,] itemData = new string[item, 2];
+            for (int i = 0; i < item; i++)
+            {
+                itemData[i, 0] = ((ComboBox)this.Controls["cbColor" + i]).Text;         // Get color 
+                itemData[i, 1] = ((TextBox)this.Controls["tbQty" + i]).Text;            // Get Quantity
+            }
+
+            // Add the order information to database and close add order form if order successfully added
+            if (o.Update(itemData, originalItemCount))
+            {
+                this.Close();
+            }
+        }
+
+        /* Refreshes the DGV as form closes
+        **********************************/
+        private void EditOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            owner.RefreshOrderDGV();
         }
     }
 }
